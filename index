@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>焼肉・ジンギスカン・もつ鍋 大ちゃん｜大阪藤井寺・古市｜深夜営業の焼肉店</title>
+  <meta name="description" content="大阪府藤井寺市野中の焼肉・ジンギスカン・もつ鍋 大ちゃん。焼肉、ホルモン、キムチ、冷麺、宴会コース、飲み放題付きコースをご用意。">
+  <meta name="keywords" content="藤井寺 焼肉,古市 焼肉,羽曳野 焼肉,焼肉 大ちゃん,ジンギスカン,もつ鍋,深夜 焼肉,宴会,飲み放題">
+  <meta name="format-detection" content="telephone=no">
+
+  <style>
+    :root {
+      --bg: #150c09;
+      --bg2: #21110d;
+      --panel: #211410;
+      --panel2: #2b1812;
+      --red: #c90017;
+      --red2: #e0001b;
+      --gold: #d8b348;
+      --gold2: #fff0aa;
+      --white: #fffaf0;
+      --muted: #d7c7b5;
+      --line: rgba(255, 232, 170, .26);
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(210, 42, 28, .25), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(216, 179, 72, .16), transparent 30%),
+        linear-gradient(180deg, #0d0705 0%, var(--bg) 38%, #100705 100%);
+      font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        Meiryo,
+        serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13, 7, 5, .9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .top-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    .brand-mini {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+
+    .brand-mini small {
+      color: var(--gold2);
+      font-size: 12px;
+      letter-spacing: .12em;
+    }
+
+    .brand-mini span {
+      font-size: 20px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .nav a {
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 42px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .hero::before {
+      content: "焼肉";
+      position: absolute;
+      right: -20px;
+      top: 24px;
+      color: rgba(255,255,255,.035);
+      font-size: clamp(110px, 18vw, 260px);
+      font-weight: 900;
+      line-height: 1;
+      writing-mode: vertical-rl;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold2);
+      background: rgba(216, 179, 72, .12);
+      border: 1px solid rgba(216, 179, 72, .4);
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 18px 0 14px;
+      font-size: clamp(36px, 7vw, 82px);
+      line-height: 1.05;
+      letter-spacing: .04em;
+      text-shadow:
+        0 3px 0 rgba(0,0,0,.7),
+        0 0 22px rgba(216, 179, 72, .25);
+    }
+
+    .gold-text {
+      color: var(--gold);
+      text-shadow:
+        0 2px 0 #4a3100,
+        0 0 18px rgba(255, 232, 170, .35);
+    }
+
+    .hero-lead {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-size: clamp(16px, 2.1vw, 20px);
+      font-weight: 700;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 800;
+    }
+
+    .hero-points li {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 999px;
+      padding: 8px 12px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+      transition: transform .18s ease, opacity .18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: .92;
+    }
+
+    .btn-red {
+      background: linear-gradient(180deg, var(--red2), #9b0012);
+      border: 1px solid rgba(255,255,255,.16);
+    }
+
+    .btn-gold {
+      color: #1c1107;
+      background: linear-gradient(180deg, #ffe391, var(--gold));
+      border: 1px solid rgba(255,255,255,.25);
+    }
+
+    .btn-dark {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.16);
+    }
+
+    .hero-card {
+      background:
+        linear-gradient(135deg, rgba(201,0,23,.2), transparent 32%),
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border: 1px solid rgba(255, 232, 170, .22);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card-title {
+      display: inline-block;
+      margin: 0 0 18px;
+      padding: 10px 18px;
+      background: var(--red);
+      color: #fff;
+      border-radius: 4px;
+      font-size: 24px;
+      font-weight: 900;
+      transform: rotate(-1.2deg);
+      box-shadow: 8px 8px 0 rgba(0,0,0,.25);
+    }
+
+    .feature-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 800;
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(255,255,255,.14);
+    }
+
+    .feature-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .section {
+      padding: 58px 0;
+    }
+
+    .section-head {
+      margin-bottom: 26px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 9px;
+      color: var(--gold2);
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(28px, 4.5vw, 48px);
+      line-height: 1.2;
+      letter-spacing: .05em;
+    }
+
+    .section-desc {
+      max-width: 760px;
+      margin: 14px auto 0;
+      color: var(--muted);
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 700;
+    }
+
+    .menu-board {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02)),
+        var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .board-title {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .board-title::before,
+    .board-title::after {
+      content: "";
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 232, 170, .55), transparent);
+    }
+
+    .board-title span {
+      display: inline-block;
+      color: var(--gold2);
+      font-size: clamp(26px, 4vw, 44px);
+      font-weight: 900;
+      letter-spacing: .08em;
+      white-space: nowrap;
+      text-shadow: 0 2px 0 #4a3100;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .menu-category {
+      min-width: 0;
+      background: rgba(0,0,0,.22);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .menu-category h3 {
+      margin: 0;
+      padding: 10px 14px;
+      background: linear-gradient(90deg, var(--red2), #960010);
+      color: #fff;
+      font-size: 21px;
+      line-height: 1.2;
+      letter-spacing: .06em;
+      text-shadow: 0 2px 0 rgba(0,0,0,.45);
+    }
+
+    .menu-list {
+      margin: 0;
+      padding: 12px 14px 14px;
+      list-style: none;
+    }
+
+    .menu-list li {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: baseline;
+      padding: 6px 0;
+      border-bottom: 1px dashed rgba(255,255,255,.12);
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 800;
+    }
+
+    .menu-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .item-name {
+      min-width: 0;
+    }
+
+    .item-note {
+      display: block;
+      margin-top: 2px;
+      color: #cdbca8;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .price {
+      color: var(--gold2);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .tax-note {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .course-card {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(201,0,23,.16), transparent 32%),
+        var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .course-ribbon {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 10px 18px;
+      background: var(--red);
+      color: #fff;
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 900;
+      letter-spacing: .07em;
+      transform: rotate(-1deg);
+      box-shadow: 8px 8px 0 rgba(0,0,0,.24);
+    }
+
+    .course-price {
+      display: flex;
+      align-items: end;
+      gap: 10px;
+      margin: 10px 0 14px;
+      color: var(--gold2);
+    }
+
+    .course-price strong {
+      font-size: clamp(42px, 6vw, 64px);
+      line-height: 1;
+      letter-spacing: .02em;
+    }
+
+    .course-price span {
+      margin-bottom: 8px;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 900;
+    }
+
+    .drink-box {
+      display: inline-block;
+      margin: 6px 0 16px;
+      padding: 12px 18px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 10px;
+      background: rgba(0,0,0,.28);
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .drink-box small {
+      display: block;
+      color: var(--muted);
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .course-list {
+      margin: 0;
+      padding-left: 1.15em;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 800;
+    }
+
+    .course-list li {
+      margin: 7px 0;
+    }
+
+    .course-sub {
+      color: var(--gold2);
+      font-weight: 900;
+    }
+
+    .add-on {
+      margin-top: 24px;
+      background: rgba(216,179,72,.11);
+      border: 1px solid rgba(216,179,72,.42);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .add-on h3 {
+      margin: 0 0 10px;
+      color: var(--gold2);
+      font-size: 24px;
+    }
+
+    .rule-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .rule {
+      background: rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px;
+      padding: 12px;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 800;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-card h3 {
+      margin: 0 0 10px;
+      color: var(--gold2);
+      font-size: 24px;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 700;
+    }
+
+    .shop-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-weight: 800;
+    }
+
+    .shop-table th,
+    .shop-table td {
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .shop-table th {
+      width: 32%;
+      color: var(--gold2);
+    }
+
+    .footer {
+      padding: 36px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.28);
+      color: var(--muted);
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .fixed-cta {
+      position: fixed;
+      right: 14px;
+      bottom: 14px;
+      z-index: 120;
+      display: flex;
+      gap: 8px;
+    }
+
+    .fixed-cta a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 108px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .fixed-call {
+      background: linear-gradient(180deg, var(--red2), #9b0012);
+    }
+
+    .fixed-map {
+      color: #1c1107;
+      background: linear-gradient(180deg, #ffe391, var(--gold));
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .course-grid,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rule-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 46px 0 30px;
+      }
+
+      .hero-card {
+        padding: 18px;
+      }
+
+      .menu-board {
+        padding: 14px;
+        border-radius: 18px;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .course-card {
+        padding: 18px;
+      }
+
+      .rule-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fixed-cta {
+        left: 10px;
+        right: 10px;
+      }
+
+      .fixed-cta a {
+        flex: 1;
+      }
+
+      .tax-note {
+        text-align: left;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "焼肉・ジンギスカン・もつ鍋 大ちゃん",
+    "servesCuisine": ["焼肉", "ジンギスカン", "もつ鍋"],
+    "telephone": "080-9501-1129",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP",
+      "addressRegion": "大阪府",
+      "addressLocality": "藤井寺市",
+      "streetAddress": "野中2-1-30"
+    },
+    "priceRange": "¥¥",
+    "url": ""
+  }
+  </script>
+</head>
+
+<body>
+  <header class="top-bar">
+    <div class="wrap top-inner">
+      <a href="#" class="brand-mini" aria-label="焼肉 大ちゃん トップへ">
+        <small>焼肉・ジンギスカン・もつ鍋</small>
+        <span>大ちゃん</span>
+      </a>
+
+      <nav class="nav" aria-label="ページ内メニュー">
+        <a href="#menu">通常メニュー</a>
+        <a href="#course">宴会コース</a>
+        <a href="#access">店舗情報</a>
+        <a href="tel:08095011129">電話する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="label">大阪藤井寺・古市エリアの焼肉店</span>
+          <h1>
+            焼肉<br>
+            <span class="gold-text">大ちゃん</span>
+          </h1>
+          <p class="hero-lead">
+            焼肉・ジンギスカン・もつ鍋を、気軽に楽しめる地元の焼肉店。<br>
+            少人数の食事から、飲み放題付き宴会コースまで対応しています。
+          </p>
+
+          <ul class="hero-points">
+            <li>焼肉</li>
+            <li>ジンギスカン</li>
+            <li>もつ鍋</li>
+            <li>宴会コース</li>
+            <li>飲み放題付き</li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn btn-red" href="tel:08095011129">電話で予約する</a>
+            <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=大阪府藤井寺市野中2-1-30" target="_blank" rel="noopener">Googleマップを見る</a>
+            <a class="btn btn-dark" href="#menu">メニューを見る</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <p class="hero-card-title">大ちゃんの楽しみ方</p>
+          <ul class="feature-list">
+            <li><span>🥩</span><span>タン・ロース・カルビ・ハラミ・ホルモンまで焼肉メニュー充実</span></li>
+            <li><span>🍻</span><span>飲み放題付き宴会コースあり</span></li>
+            <li><span>🔥</span><span>もつ鍋・ジンギスカンの追加セットあり</span></li>
+            <li><span>🍚</span><span>ご飯もの・冷麺・ビビン麺・スープも用意</span></li>
+            <li><span>📍</span><span>大阪府藤井寺市野中2-1-30</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">Grand Menu</span>
+          <h2>通常メニュー</h2>
+          <p class="section-desc">
+            焼肉、ホルモン、キムチ、ご飯もの、麺、スープ、デザートまで。
+            表示価格は税込です。
+          </p>
+        </div>
+
+        <div class="menu-board">
+          <div class="board-title">
+            <span>焼肉・一品</span>
+          </div>
+
+          <div class="menu-grid">
+            <section class="menu-category">
+              <h3>焼肉 〜タン〜</h3>
+              <ul class="menu-list">
+                <li><span class="item-name">特選厚切りタン</span><span class="price">1,980円</span></li>
+                <li><span class="item-name">上塩タン</span><span class="price">1,500円</span></li>
+                <li><span class="item-name">塩タン</span><span class="price">1,200円</span></li>
+                <li><span class="item-name">タンのネギ</span><span class="price">150円</span></li>
+              </ul>
+            </section>
+
+            <section class="menu-category">
+              <h3>焼肉</h3>
+              <ul class="menu-list">
+                <li><span class="item-name">特選ロース</span><span class="price">1,980円</span></li>
+                <li><span class="item-name">特選カルビ</span><span class="price">1,760円</span></li>
+                <li><span class="item-name">上ロース</span><span class="price">1,500円</span></li>
+                <li><span class="item-name">上カルビ</span><span class="price">1,350円</span></li>
+                <li><span class="item-name">上ハラミ</span><span class="price">1,600円</span></li>
+                <li><span class="item-name">ハラミ</span><span class="price">1,300円</span></li>
+                <li><span class="item-name">本日の赤身</span><span class="price">1,350円</span></li>
+              </ul>
+            </section>
+
+            <section class="menu-category">
+              <h3>ホルモン</h3>
+              <ul class="menu-list">
+                <li><span class="item-name">上ミノ</span><span class="price">990円</span></li>
+                <li><span class="item-name">上レバー</span><span class="price">880円</span></li>
+                <li><span class="item-name">テッチャン</span><span class="price">660円</span></li>
+                <li><span class="item-name">ハツ</span><span class="price">660円</span></li>
+                <li><span class="item-name">センマイ</span><span class="price">660円</span></li>
+                <li><span class="item-name">生センマイ</span><span class="price">770円</span></li>
+              </ul>
+            </section>
+
+            <section class="menu-category">
+              <h3>ラム・鶏・豚</h3>
+              <ul class="menu-list">
+                <li><span class="item-name">ラム肉</span><span class="price">950円</span></li>
+                <li><span class="item-name">とりもも</span><span class="price">550円</span></li>
+                <li><span class="item-name">豚バラ</span><span class="price">550円</span></li>
+                <li><span class="item-name">ウィンナー</span><span class="price">550円</span></li>
+              </ul>
+            </section>
+
+            <section class="menu-category">
+              <h3>キムチ</h3>
+              <ul class="menu-list">
+                <li><span class="item-name">白菜キムチ</span><span class="price">330円</span></li>
+                <li><span class="item-name">胡瓜キムチ</span><span class="price">330円</span></li>
+                <li><span class="item-name">大根キムチ</span><span class="price">330円</span></li>
+                <li><span class="item-name">山芋キムチ</span><span class="price">330円</span></li>
+                <li><span class="item-name">切干大根キムチ</span><span class="price">330円</span></li>
+                <li><span class="item-name">キムチ盛り合わせ</span><span class="price">660円</span></li>
+              </ul>
+            </section>
+
+            <section class="menu-category">
+              <h3>ナムル</h3>
+              <ul class="menu-list">
+                <li><span class="item-name">もやしナムル</span><span class="price">330円</span></li>
+                <li><span class="item-name">ほうれん草ナムル</span><span class="price">330円</span></li>
+              </ul>
+            </section>
+
+            <section class="menu-category">
+              <h3>野菜</h3>
+              <ul class="menu-list">
+                <li><span class="item-name">大ちゃん特製サラダ</span><span class="price">600円</span></li>
+                <li><span class="item-name">やみつききゅうり</span><span class="price">330円</span></li>
+                <li><span class="item-name">塩キャベツ</span><span class="price">220円</span></li>
+                <li><span class="item-name">キャベツ</span><span class="price">110円</span></li>
+                <li><span class="item-name">焼き野菜盛り合わせ</span><span class="price">600円</span></li>
+                <li><span class="item-name">チシャ菜</span><span class="price">330円</span></li>
+                <li><span class="item-name">韓国のり</span><span class="price">220円</span></li>
+              </ul>
+            </section>
+
+            <section class="menu-category">
+              <h3>ご飯もの・麺</h3>
+              <ul class="menu-list">
+                <li><span class="item-name">ご飯 大</span><span class="price">385円</span></li>
+                <li><span class="item-name">ご飯 中</span><span class="price">330円</span></li>
+                <li><span class="item-name">ご飯 小</span><span class="price">280円</span></li>
+                <li><span class="item-name">ビビンバ</span><span class="price">880円</span></li>
+                <li><span class="item-name">クッパ</span><span class="price">770円</span></li>
+                <li><span class="item-name">カルビクッパ</span><span class="price">880円</span></li>
+                <li><span class="item-name">お茶漬け<span class="item-note">梅・シャケ</span></span><span class="price">各440円</span></li>
+                <li><span class="item-name">特製冷麺</span><span class="price">880円</span></li>
+                <li><span class="item-name">ビビン麺</span><span class="price">950円</span></li>
+              </ul>
+            </section>
+
+            <section class="menu-category">
+              <h3>スープ</h3>
+              <ul class="menu-list">
+                <li><span class="item-name">わかめスープ</span><span class="price">450円</span></li>
+                <li><span class="item-name">たまごスープ</span><span class="price">450円</span></li>
+                <li><span class="item-name">わかたまスープ</span><span class="price">500円</span></li>
+              </ul>
+            </section>
+
+            <section class="menu-category">
+              <h3>デザート</h3>
+              <ul class="menu-list">
+                <li>
+                  <span class="item-name">
+                    バニラアイス
+                    <span class="item-note">トッピング：チョコ・ストロベリー・キャラメル</span>
+                  </span>
+                  <span class="price">350円</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <p class="tax-note">※表示価格はすべて税込です。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="course" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">Party Course</span>
+          <h2>飲み放題付き 宴会コース</h2>
+          <p class="section-desc">
+            2名様以上から利用可能。前日までのご予約で対応。12名様から貸切相談可能です。
+          </p>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card">
+            <div class="course-ribbon">スタンダード宴会コース</div>
+
+            <div class="course-price">
+              <strong>5,000</strong>
+              <span>円 税込 / お一人様</span>
+            </div>
+
+            <div class="drink-box">
+              飲み放題 120分
+              <small>ラストオーダー10分前</small>
+            </div>
+
+            <ul class="course-list">
+              <li>大ちゃん特製サラダ</li>
+              <li>キムチ盛り合わせ</li>
+              <li>焼肉</li>
+              <li><span class="course-sub">塩タン</span></li>
+              <li>
+                <span class="course-sub">お肉盛り合わせ</span>
+                <br>ハラミ / 上カルビ / 鶏もも肉 / てっちゃん
+              </li>
+              <li>ご飯 or 冷麺ハーフ or ビビン麺ハーフ</li>
+            </ul>
+          </article>
+
+          <article class="course-card">
+            <div class="course-ribbon">大ちゃん贅沢宴会コース</div>
+
+            <div class="course-price">
+              <strong>7,500</strong>
+              <span>円 税込 / お一人様</span>
+            </div>
+
+            <div class="drink-box">
+              飲み放題 120分
+              <small>ラストオーダー10分前</small>
+            </div>
+
+            <ul class="course-list">
+              <li>大ちゃん特製サラダ</li>
+              <li>キムチ盛り合わせ</li>
+              <li>チシャ菜</li>
+              <li>
+                <span class="course-sub">タン盛り合わせ</span>
+                <br>厚切りタン / 上塩タン / タン下
+              </li>
+              <li>
+                <span class="course-sub">厳選肉5種盛り合わせ</span>
+                <br>当日の仕入れにより内容は変わります
+              </li>
+              <li>
+                <span class="course-sub">ホルモン盛り合わせ</span>
+                <br>当日の仕入れにより内容は変わります
+              </li>
+              <li>ご飯 or 冷麺ハーフ or ビビン麺ハーフ</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="add-on">
+          <h3>もつ鍋・ジンギスカン追加できます</h3>
+          <ul class="course-list">
+            <li>上記宴会プランに <span class="course-sub">+2,000円</span> でもつ鍋セット追加 <br>〆にラーメン or 雑炊付き</li>
+            <li>上記宴会プランに <span class="course-sub">+2,500円</span> でジンギスカンセット追加 <br>ご飯 or ハーフクッパ付き</li>
+          </ul>
+          <p class="tax-note">※お一人様の金額です。表示価格はすべて税込です。</p>
+        </div>
+
+        <div class="rule-grid">
+          <div class="rule">◎ 2名様以上からご利用可能</div>
+          <div class="rule">◎ 前日までのご予約で対応可</div>
+          <div class="rule">◎ 12名様から貸切可</div>
+          <div class="rule">◎ キャンセル費用は頂きません</div>
+        </div>
+
+        <div class="cta-row" style="justify-content:center; margin-top:28px;">
+          <a class="btn btn-red" href="tel:08095011129">宴会予約の電話をする</a>
+          <a class="btn btn-gold" href="#access">店舗情報を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">Shop Info</span>
+          <h2>店舗情報</h2>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>焼肉・ジンギスカン・もつ鍋 大ちゃん</h3>
+            <table class="shop-table">
+              <tr>
+                <th>住所</th>
+                <td>大阪府藤井寺市野中2-1-30</td>
+              </tr>
+              <tr>
+                <th>電話</th>
+                <td><a href="tel:08095011129">080-9501-1129</a></td>
+              </tr>
+              <tr>
+                <th>ジャンル</th>
+                <td>焼肉 / ジンギスカン / もつ鍋</td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>最新の営業時間はGoogle店舗情報またはお電話でご確認ください。</td>
+              </tr>
+              <tr>
+                <th>予約</th>
+                <td>宴会コースは前日までのご予約で対応可能です。</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="info-card">
+            <h3>ご来店前に</h3>
+            <p>
+              宴会、貸切、飲み放題、もつ鍋・ジンギスカン追加セットなどは、
+              仕入れ状況やお席の状況により対応が変わる場合があります。
+              ご来店前にお電話いただくと確実です。
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-red" href="tel:08095011129">電話する</a>
+              <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=大阪府藤井寺市野中2-1-30" target="_blank" rel="noopener">地図を見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="fixed-cta" aria-label="固定予約ボタン">
+    <a class="fixed-call" href="tel:08095011129">電話予約</a>
+    <a class="fixed-map" href="https://www.google.com/maps/search/?api=1&query=大阪府藤井寺市野中2-1-30" target="_blank" rel="noopener">地図</a>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 焼肉・ジンギスカン・もつ鍋 大ちゃん</p>
+      <p>大阪府藤井寺市野中2-1-30 / TEL：080-9501-1129</p>
+    </div>
+  </footer>
+</body>
+</html>
