@@ -4,36 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>焼肉大ちゃん｜大阪藤井寺・古市｜焼肉・ジンギスカン・もつ鍋</title>
-  <meta name="description" content="大阪府藤井寺市野中の焼肉大ちゃん。焼肉・ジンギスカン・もつ鍋・宴会コース・飲み放題。藤井寺・古市エリアで焼肉なら焼肉大ちゃんへ。">
+  <meta name="description" content="大阪府藤井寺市野中の焼肉大ちゃん。焼肉・ジンギスカン・もつ鍋・宴会コース・飲み放題。あたたかい雰囲気の焼肉店です。">
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Yomogi&family=Yuji+Boku&family=Zen+Kurenaido&display=swap');
+
     :root {
       --black:#070302;
-      --brown:#1a0b07;
-      --dark:#24100a;
+      --dark:#140806;
+      --brown:#27120a;
       --red:#c90016;
-      --red2:#8f000e;
-      --gold:#d7a928;
-      --gold2:#fff0a3;
-      --cream:#fff3dc;
-      --paper:#f4ead3;
-      --ink:#15100c;
-      --muted:#d7c1a0;
-      --line:rgba(255,220,120,.3);
+      --red-dark:#82000b;
+      --gold:#d6a935;
+      --gold-light:#fff0a3;
+      --cream:#fff4dc;
+      --paper:#f8efd8;
+      --ink:#17110c;
+      --muted:#d8c3a4;
+      --blue:#b8dce5;
+      --orange:#e9a34e;
     }
 
     * {
       box-sizing:border-box;
     }
 
+    html {
+      scroll-behavior:smooth;
+    }
+
     body {
       margin:0;
       color:var(--cream);
       background:
-        radial-gradient(circle at 70% 10%, rgba(255,90,20,.28), transparent 30%),
-        radial-gradient(circle at 25% 0%, rgba(215,169,40,.16), transparent 24%),
-        linear-gradient(180deg,#050202 0%,#160805 45%,#070202 100%);
-      font-family:"Yu Mincho","Hiragino Mincho ProN","Yu Gothic",Meiryo,serif;
+        radial-gradient(circle at 72% 15%, rgba(255,92,22,.28), transparent 28%),
+        radial-gradient(circle at 18% 0%, rgba(214,169,53,.16), transparent 26%),
+        linear-gradient(180deg,#050202 0%,#170805 48%,#070302 100%);
+      font-family:"Zen Kurenaido","Yu Gothic",Meiryo,sans-serif;
     }
 
     a {
@@ -43,13 +50,13 @@
 
     .wrap {
       width:min(1180px,calc(100% - 28px));
-      margin:auto;
+      margin:0 auto;
     }
 
     .header {
       position:sticky;
       top:0;
-      z-index:50;
+      z-index:100;
       background:rgba(5,2,2,.9);
       backdrop-filter:blur(12px);
       border-bottom:1px solid rgba(255,255,255,.08);
@@ -65,19 +72,21 @@
 
     .logo {
       line-height:1.1;
-      font-weight:900;
-      letter-spacing:.08em;
     }
 
     .logo small {
       display:block;
-      color:var(--gold2);
+      color:var(--gold-light);
       font-size:12px;
+      font-weight:700;
+      letter-spacing:.14em;
     }
 
     .logo strong {
       display:block;
-      font-size:25px;
+      font-family:"Yuji Boku","Yu Mincho",serif;
+      font-size:28px;
+      letter-spacing:.04em;
     }
 
     .nav {
@@ -85,28 +94,26 @@
       gap:10px;
       flex-wrap:wrap;
       justify-content:flex-end;
-      font-family:"Yu Gothic",Meiryo,sans-serif;
-      font-weight:900;
+      font-weight:800;
       font-size:14px;
     }
 
     .nav a {
       padding:9px 14px;
       border-radius:999px;
-      border:1px solid rgba(255,255,255,.15);
       background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
     }
 
-    .nav .red {
-      background:linear-gradient(180deg,var(--red),var(--red2));
+    .nav .reserve {
+      background:linear-gradient(180deg,var(--red),var(--red-dark));
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
     }
 
     .hero {
       position:relative;
       overflow:hidden;
-      min-height:780px;
-      display:flex;
-      align-items:center;
+      padding:56px 0 70px;
       border-bottom:1px solid rgba(255,255,255,.1);
     }
 
@@ -115,63 +122,59 @@
       position:absolute;
       inset:0;
       background:
-        linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.46),rgba(0,0,0,.9)),
-        radial-gradient(circle at 72% 50%,rgba(255,72,0,.34),transparent 34%);
-      z-index:1;
+        radial-gradient(circle at 76% 46%, rgba(255,75,0,.34), transparent 30%),
+        linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.46),rgba(0,0,0,.9));
+      z-index:0;
     }
 
     .hero::after {
       content:"焼肉";
       position:absolute;
-      right:-3vw;
-      bottom:-8vw;
-      z-index:0;
+      right:-4vw;
+      bottom:-6vw;
       color:rgba(255,255,255,.045);
-      font-size:clamp(150px,26vw,390px);
-      font-weight:900;
+      font-family:"Yuji Boku",serif;
+      font-size:clamp(150px,26vw,380px);
       line-height:1;
-      letter-spacing:-.08em;
+      z-index:0;
     }
 
     .hero-inner {
       position:relative;
-      z-index:2;
+      z-index:1;
       display:grid;
-      grid-template-columns:1.04fr .96fr;
-      gap:36px;
+      grid-template-columns:1.08fr .92fr;
+      gap:34px;
       align-items:center;
-      padding:70px 0;
     }
 
     .sign-frame {
-      position:relative;
-      padding:18px;
-      border-radius:10px;
+      padding:17px;
+      border-radius:12px;
       background:
-        linear-gradient(135deg,#7b4b23,#c09154 28%,#5a3418 55%,#d0a56a);
+        linear-gradient(135deg,#684021,#c79a61 24%,#543015 56%,#d7b27a);
       box-shadow:
-        0 25px 70px rgba(0,0,0,.62),
-        inset 0 0 0 2px rgba(0,0,0,.35),
-        inset 0 0 30px rgba(0,0,0,.42);
-      transform:rotate(-.8deg);
+        0 25px 80px rgba(0,0,0,.68),
+        inset 0 0 0 2px rgba(0,0,0,.32),
+        inset 0 0 30px rgba(0,0,0,.35);
     }
 
     .sign-paper {
       position:relative;
       min-height:520px;
-      padding:34px 30px 28px;
       overflow:hidden;
+      padding:30px 28px 28px;
       color:var(--ink);
       background:
-        radial-gradient(circle at 12% 18%, rgba(116,190,215,.38), transparent 7%),
-        radial-gradient(circle at 32% 5%, rgba(116,190,215,.32), transparent 6%),
-        radial-gradient(circle at 74% 14%, rgba(116,190,215,.32), transparent 7%),
-        radial-gradient(circle at 21% 72%, rgba(236,156,64,.36), transparent 9%),
-        radial-gradient(circle at 55% 28%, rgba(236,156,64,.35), transparent 7%),
-        radial-gradient(circle at 88% 11%, rgba(236,156,64,.4), transparent 9%),
-        linear-gradient(180deg,#fbf4e3,#eee1c6);
-      border:1px solid rgba(60,30,10,.35);
-      box-shadow:inset 0 0 28px rgba(80,45,20,.24);
+        radial-gradient(circle at 12% 23%, rgba(184,220,229,.55), transparent 8%),
+        radial-gradient(circle at 32% 8%, rgba(184,220,229,.42), transparent 7%),
+        radial-gradient(circle at 74% 23%, rgba(184,220,229,.45), transparent 8%),
+        radial-gradient(circle at 13% 70%, rgba(233,163,78,.44), transparent 10%),
+        radial-gradient(circle at 57% 24%, rgba(233,163,78,.44), transparent 8%),
+        radial-gradient(circle at 86% 12%, rgba(233,163,78,.5), transparent 10%),
+        linear-gradient(180deg,#fbf4e5,#efe3c9);
+      border:1px solid rgba(65,35,12,.38);
+      box-shadow:inset 0 0 34px rgba(75,45,18,.22);
     }
 
     .sign-paper::before {
@@ -186,49 +189,49 @@
           transparent 1px,
           transparent 5px
         );
-      mix-blend-mode:multiply;
       pointer-events:none;
     }
 
-    .brush-main {
+    .sign-name {
       position:relative;
       z-index:1;
       margin:0;
-      line-height:.92;
+      color:#15100b;
+      font-family:"Yuji Boku","Yomogi","Yu Mincho",serif;
+      font-weight:400;
+      line-height:.9;
       letter-spacing:-.04em;
-      color:#18120d;
-      font-weight:900;
+      transform:rotate(-1.2deg);
       text-shadow:
-        1px 1px 0 rgba(0,0,0,.15),
-        -1px 0 0 rgba(0,0,0,.12);
+        .9px .9px 0 rgba(0,0,0,.16),
+        -.6px 0 0 rgba(0,0,0,.12);
     }
 
-    .brush-main .small {
+    .sign-name .yakiniku {
       display:block;
-      font-size:clamp(44px,7vw,86px);
-      transform:translateX(6px);
+      font-size:clamp(52px,7vw,88px);
     }
 
-    .brush-main .big {
+    .sign-name .daichan {
       display:block;
-      margin-top:8px;
-      font-size:clamp(62px,10vw,128px);
+      margin-top:6px;
+      font-size:clamp(72px,10vw,132px);
     }
 
     .heart {
-      color:#df4d28;
-      font-size:.34em;
+      color:#e14b2d;
+      font-family:"Yomogi",sans-serif;
+      font-size:.35em;
       vertical-align:middle;
-      margin:0 -4px;
+      margin:0 -5px;
       text-shadow:none;
     }
 
-    .smile {
+    .face {
       display:inline-block;
-      color:#23170f;
-      font-size:.28em;
-      vertical-align:middle;
-      transform:translateY(-4px) rotate(10deg);
+      font-family:"Yomogi",sans-serif;
+      font-size:.24em;
+      transform:translateY(-5px) rotate(7deg);
     }
 
     .poem {
@@ -238,44 +241,58 @@
       flex-direction:row-reverse;
       justify-content:center;
       align-items:flex-end;
-      gap:10px;
+      gap:9px;
       margin-top:34px;
-      min-height:210px;
-      font-weight:900;
-      color:#19110b;
+      min-height:225px;
+      color:#17110c;
+      font-family:"Yomogi","Yuji Boku","Yu Mincho",serif;
+      font-weight:700;
     }
 
     .poem span {
       writing-mode:vertical-rl;
       text-orientation:upright;
-      font-size:clamp(21px,2.5vw,31px);
-      line-height:1.05;
-      letter-spacing:.06em;
-      text-shadow:.6px .6px 0 rgba(0,0,0,.18);
+      font-size:clamp(23px,2.8vw,34px);
+      line-height:1.02;
+      letter-spacing:.04em;
+      transform:rotate(var(--r));
+      text-shadow:.8px .8px 0 rgba(0,0,0,.13);
     }
+
+    .poem span:nth-child(1) { --r:2deg; }
+    .poem span:nth-child(2) { --r:-2deg; }
+    .poem span:nth-child(3) { --r:1deg; }
+    .poem span:nth-child(4) { --r:-1deg; }
+    .poem span:nth-child(5) { --r:2deg; }
+    .poem span:nth-child(6) { --r:-2deg; }
+    .poem span:nth-child(7) { --r:1deg; }
+    .poem span:nth-child(8) { --r:-1deg; }
+    .poem span:nth-child(9) { --r:2deg; }
+    .poem span:nth-child(10) { --r:-2deg; }
+    .poem span:nth-child(11) { --r:1deg; }
 
     .stamp {
       position:absolute;
-      left:8px;
-      bottom:10px;
+      left:14px;
+      bottom:18px;
       width:48px;
       height:48px;
       display:flex;
       align-items:center;
       justify-content:center;
+      background:#c84b38;
       color:#fff;
-      background:#c74935;
-      font-weight:900;
-      font-size:26px;
-      transform:rotate(-14deg);
-      opacity:.86;
+      font-family:"Yuji Boku",serif;
+      font-size:28px;
+      transform:rotate(-13deg);
+      opacity:.9;
     }
 
     .stamp::before {
       content:"";
       position:absolute;
       inset:5px;
-      border:2px solid rgba(255,255,255,.7);
+      border:2px solid rgba(255,255,255,.78);
     }
 
     .hero-copy {
@@ -284,108 +301,118 @@
 
     .badge {
       display:inline-flex;
-      align-items:center;
-      gap:8px;
       padding:8px 16px;
-      border:1px solid rgba(255,226,130,.48);
-      background:rgba(215,169,40,.13);
-      color:var(--gold2);
       border-radius:999px;
-      font-family:"Yu Gothic",Meiryo,sans-serif;
-      font-weight:900;
-      font-size:14px;
+      border:1px solid rgba(255,226,130,.48);
+      background:rgba(214,169,53,.14);
+      color:var(--gold-light);
+      font-weight:800;
+      letter-spacing:.08em;
     }
 
-    h1 {
-      margin:22px 0 12px;
-      font-size:clamp(48px,7.8vw,104px);
-      line-height:1.02;
+    .main-copy {
+      margin:20px 0 0;
+      font-family:"Yuji Boku","Yu Mincho",serif;
+      font-size:clamp(46px,7.8vw,100px);
+      line-height:1.05;
       letter-spacing:.03em;
       text-shadow:
         0 5px 0 #000,
-        0 0 28px rgba(255,40,0,.45),
-        0 0 44px rgba(215,169,40,.22);
+        0 0 30px rgba(255,75,0,.42);
     }
 
-    .gold {
-      color:var(--gold2);
+    .main-copy .gold {
+      color:var(--gold-light);
       text-shadow:
-        0 4px 0 #5a3000,
-        0 0 24px rgba(255,230,120,.55);
+        0 4px 0 #5b3300,
+        0 0 28px rgba(255,230,130,.48);
     }
 
     .lead {
-      margin:18px 0 0;
-      max-width:700px;
-      color:#f5e2c7;
-      font-family:"Yu Gothic",Meiryo,sans-serif;
-      font-size:clamp(18px,2.3vw,25px);
-      font-weight:900;
-      line-height:1.65;
+      margin:22px 0 0;
+      color:#f2dfc1;
+      font-size:clamp(18px,2.2vw,24px);
+      line-height:1.75;
+      font-weight:800;
     }
 
-    .meat-stage {
+    .grill-card {
       position:relative;
-      height:250px;
-      margin-top:26px;
-      border-radius:26px;
+      height:260px;
+      margin-top:28px;
       overflow:hidden;
+      border-radius:28px;
+      border:1px solid rgba(255,220,120,.24);
       background:
-        radial-gradient(circle at 72% 70%, rgba(255,70,0,.62), transparent 18%),
-        radial-gradient(circle at 30% 74%, rgba(255,120,0,.42), transparent 22%),
-        linear-gradient(180deg,#2a120b,#090403);
-      border:1px solid rgba(255,220,120,.22);
-      box-shadow:0 20px 60px rgba(0,0,0,.5);
+        radial-gradient(circle at 64% 68%, rgba(255,80,0,.62), transparent 20%),
+        radial-gradient(circle at 28% 72%, rgba(255,140,0,.42), transparent 24%),
+        linear-gradient(180deg,#2b130b,#070302);
+      box-shadow:0 22px 70px rgba(0,0,0,.56);
     }
 
-    .grill {
+    .grill-card::before {
+      content:"";
       position:absolute;
       inset:0;
       background:
-        repeating-linear-gradient(25deg, transparent 0 22px, rgba(255,255,255,.16) 23px 25px),
-        repeating-linear-gradient(-25deg, transparent 0 22px, rgba(255,255,255,.12) 23px 25px);
-      opacity:.48;
-      transform:translateY(58px);
+        repeating-linear-gradient(24deg, transparent 0 22px, rgba(255,255,255,.17) 23px 25px),
+        repeating-linear-gradient(-24deg, transparent 0 22px, rgba(255,255,255,.13) 23px 25px);
+      opacity:.5;
+      transform:translateY(62px);
+    }
+
+    .smoke {
+      position:absolute;
+      top:10px;
+      left:10%;
+      width:76%;
+      height:140px;
+      background:
+        radial-gradient(ellipse at 22% 60%, rgba(255,255,255,.23), transparent 34%),
+        radial-gradient(ellipse at 50% 30%, rgba(255,255,255,.18), transparent 34%),
+        radial-gradient(ellipse at 76% 52%, rgba(255,255,255,.15), transparent 32%);
+      filter:blur(13px);
+      opacity:.64;
     }
 
     .flame {
       position:absolute;
-      bottom:-35px;
-      width:120px;
-      height:170px;
+      bottom:-40px;
+      width:130px;
+      height:178px;
       border-radius:60% 40% 60% 40%;
-      background:radial-gradient(circle at 50% 65%, #fff27b, #ff8a00 38%, #d01800 68%, transparent 72%);
+      background:radial-gradient(circle at 50% 65%, #fff17a, #ff8c00 38%, #d41b00 68%, transparent 72%);
       filter:blur(1px);
       opacity:.85;
-      animation:flicker 1.8s infinite alternate;
+      animation:flicker 1.7s infinite alternate;
     }
 
     .flame.one { left:8%; }
-    .flame.two { left:38%; animation-delay:.4s; transform:scale(.8); }
-    .flame.three { right:8%; animation-delay:.8s; transform:scale(1.15); }
+    .flame.two { left:40%; animation-delay:.35s; transform:scale(.82); }
+    .flame.three { right:8%; animation-delay:.7s; transform:scale(1.12); }
 
     @keyframes flicker {
       from { transform:translateY(0) scale(.9) rotate(-4deg); opacity:.58; }
-      to { transform:translateY(-18px) scale(1.08) rotate(4deg); opacity:.9; }
+      to { transform:translateY(-18px) scale(1.08) rotate(4deg); opacity:.92; }
     }
 
     .meat {
       position:absolute;
-      right:9%;
-      top:36px;
-      width:280px;
-      height:104px;
+      right:8%;
+      top:42px;
+      width:292px;
+      height:110px;
+      z-index:4;
       border-radius:46% 38% 42% 36%;
       background:
-        radial-gradient(circle at 28% 30%, rgba(255,255,255,.55), transparent 7%),
+        radial-gradient(circle at 28% 30%, rgba(255,255,255,.56), transparent 7%),
         radial-gradient(circle at 60% 52%, rgba(255,230,180,.48), transparent 6%),
         repeating-linear-gradient(115deg, rgba(255,235,210,.7) 0 7px, transparent 7px 20px),
-        linear-gradient(135deg,#b02b1f,#f06a3b 38%,#6e160e);
+        linear-gradient(135deg,#982217,#f06a3b 40%,#61120b);
       box-shadow:
-        0 15px 40px rgba(0,0,0,.45),
-        inset 0 -12px 18px rgba(55,8,4,.35);
+        0 16px 42px rgba(0,0,0,.48),
+        inset 0 -13px 19px rgba(55,8,4,.38);
       transform:rotate(13deg);
-      z-index:4;
     }
 
     .meat::before {
@@ -394,20 +421,6 @@
       inset:10px;
       border-radius:inherit;
       border:2px solid rgba(255,230,190,.16);
-    }
-
-    .smoke {
-      position:absolute;
-      top:10px;
-      left:12%;
-      width:70%;
-      height:130px;
-      background:
-        radial-gradient(ellipse at 20% 60%, rgba(255,255,255,.22), transparent 32%),
-        radial-gradient(ellipse at 48% 30%, rgba(255,255,255,.18), transparent 32%),
-        radial-gradient(ellipse at 72% 50%, rgba(255,255,255,.15), transparent 30%);
-      filter:blur(12px);
-      opacity:.65;
     }
 
     .actions {
@@ -422,10 +435,10 @@
       align-items:center;
       justify-content:center;
       min-height:56px;
-      padding:14px 24px;
+      padding:14px 25px;
       border-radius:12px;
-      font-family:"Yu Gothic",Meiryo,sans-serif;
       font-weight:900;
+      font-size:17px;
       box-shadow:0 15px 38px rgba(0,0,0,.45);
       transition:.18s;
     }
@@ -437,13 +450,13 @@
 
     .btn-red {
       background:linear-gradient(180deg,#ff1b32,#9e0012);
-      border:1px solid rgba(255,255,255,.22);
+      border:1px solid rgba(255,255,255,.2);
     }
 
     .btn-gold {
       color:#1b0c03;
-      background:linear-gradient(180deg,#fff0a3,#d7a928);
-      border:1px solid rgba(255,255,255,.32);
+      background:linear-gradient(180deg,#fff0a3,#d6a935);
+      border:1px solid rgba(255,255,255,.28);
     }
 
     .section {
@@ -456,8 +469,7 @@
     }
 
     .kicker {
-      color:var(--gold2);
-      font-family:"Yu Gothic",Meiryo,sans-serif;
+      color:var(--gold-light);
       font-weight:900;
       letter-spacing:.18em;
       font-size:13px;
@@ -465,7 +477,8 @@
 
     h2 {
       margin:8px 0 0;
-      font-size:clamp(32px,5vw,58px);
+      font-family:"Yuji Boku","Yu Mincho",serif;
+      font-size:clamp(34px,5vw,60px);
       line-height:1.15;
       text-shadow:0 4px 0 #000;
     }
@@ -479,33 +492,34 @@
     .card {
       position:relative;
       overflow:hidden;
-      min-height:240px;
+      min-height:230px;
       padding:24px;
       border-radius:24px;
-      border:1px solid var(--line);
+      border:1px solid rgba(255,220,120,.28);
       background:
         linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.02)),
-        var(--dark);
+        #21100a;
       box-shadow:0 18px 55px rgba(0,0,0,.38);
     }
 
     .card::after {
       content:"";
       position:absolute;
-      right:-40px;
-      bottom:-40px;
-      width:150px;
-      height:150px;
+      right:-42px;
+      bottom:-42px;
+      width:155px;
+      height:155px;
       border-radius:999px;
-      background:radial-gradient(circle,rgba(217,0,24,.42),transparent 65%);
+      background:radial-gradient(circle,rgba(201,0,22,.42),transparent 65%);
     }
 
     .card h3 {
       position:relative;
       z-index:1;
       margin:0 0 12px;
-      color:var(--gold2);
-      font-size:30px;
+      color:var(--gold-light);
+      font-family:"Yuji Boku","Yu Mincho",serif;
+      font-size:32px;
       line-height:1.2;
     }
 
@@ -514,16 +528,16 @@
       z-index:1;
       margin:0;
       color:var(--muted);
-      font-family:"Yu Gothic",Meiryo,sans-serif;
       font-weight:800;
+      line-height:1.8;
     }
 
-    .course-push {
+    .course-band {
       background:
-        linear-gradient(90deg,rgba(217,0,24,.34),rgba(0,0,0,.26)),
-        var(--dark);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
+        linear-gradient(90deg,rgba(201,0,22,.34),rgba(0,0,0,.28)),
+        #21100a;
+      border-top:1px solid rgba(255,220,120,.28);
+      border-bottom:1px solid rgba(255,220,120,.28);
     }
 
     .course-box {
@@ -533,16 +547,12 @@
       gap:24px;
     }
 
-    .course-box h2 {
-      margin:0 0 12px;
-    }
-
     .course-box p {
-      margin:0;
+      margin:12px 0 0;
       color:var(--muted);
-      font-family:"Yu Gothic",Meiryo,sans-serif;
-      font-weight:900;
       font-size:18px;
+      font-weight:800;
+      line-height:1.8;
     }
 
     .info {
@@ -561,14 +571,14 @@
 
     .info-box h3 {
       margin:0 0 14px;
-      color:var(--gold2);
-      font-size:28px;
+      color:var(--gold-light);
+      font-family:"Yuji Boku","Yu Mincho",serif;
+      font-size:31px;
     }
 
     table {
       width:100%;
       border-collapse:collapse;
-      font-family:"Yu Gothic",Meiryo,sans-serif;
       font-weight:800;
     }
 
@@ -580,7 +590,7 @@
     }
 
     th {
-      color:var(--gold2);
+      color:var(--gold-light);
       width:34%;
     }
 
@@ -590,8 +600,8 @@
       color:var(--muted);
       background:#050202;
       border-top:1px solid rgba(255,255,255,.08);
-      font-family:"Yu Gothic",Meiryo,sans-serif;
       font-size:13px;
+      line-height:1.8;
     }
 
     .fixed {
@@ -599,7 +609,7 @@
       left:12px;
       right:12px;
       bottom:12px;
-      z-index:80;
+      z-index:120;
       display:none;
       gap:10px;
     }
@@ -607,11 +617,10 @@
     .fixed a {
       flex:1;
       display:flex;
-      justify-content:center;
       align-items:center;
-      min-height:52px;
+      justify-content:center;
+      min-height:54px;
       border-radius:999px;
-      font-family:"Yu Gothic",Meiryo,sans-serif;
       font-weight:900;
       box-shadow:0 14px 34px rgba(0,0,0,.45);
     }
@@ -622,21 +631,13 @@
 
     .fixed .menu {
       color:#1b0c03;
-      background:linear-gradient(180deg,#fff0a3,#d7a928);
+      background:linear-gradient(180deg,#fff0a3,#d6a935);
     }
 
     @media(max-width:960px) {
-      .hero {
-        min-height:auto;
-      }
-
       .hero-inner,
       .course-box,
       .info {
-        grid-template-columns:1fr;
-      }
-
-      .cards {
         grid-template-columns:1fr;
       }
 
@@ -644,30 +645,51 @@
         display:none;
       }
 
+      .cards {
+        grid-template-columns:1fr;
+      }
+
       .fixed {
         display:flex;
       }
 
-      .sign-frame {
-        transform:none;
+      .sign-paper {
+        min-height:auto;
       }
     }
 
     @media(max-width:640px) {
+      .hero {
+        padding:24px 0 46px;
+      }
+
+      .sign-frame {
+        padding:10px;
+      }
+
       .sign-paper {
-        min-height:500px;
-        padding:26px 18px;
+        padding:22px 14px 22px;
+      }
+
+      .sign-name .yakiniku {
+        font-size:54px;
+      }
+
+      .sign-name .daichan {
+        font-size:78px;
       }
 
       .poem {
-        gap:6px;
+        gap:5px;
+        margin-top:26px;
+        min-height:230px;
       }
 
       .poem span {
         font-size:20px;
       }
 
-      .meat-stage {
+      .grill-card {
         height:220px;
       }
 
@@ -675,6 +697,10 @@
         width:220px;
         height:88px;
         right:4%;
+      }
+
+      .actions {
+        display:none;
       }
     }
   </style>
@@ -693,7 +719,7 @@
         <a href="menu.html">メニュー</a>
         <a href="#course">宴会</a>
         <a href="#access">店舗情報</a>
-        <a class="red" href="tel:08095011129">電話予約</a>
+        <a class="reserve" href="tel:08095011129">電話予約</a>
       </nav>
     </div>
   </header>
@@ -701,14 +727,14 @@
   <main>
     <section class="hero">
       <div class="wrap hero-inner">
-        <div class="sign-frame" aria-label="焼肉大ちゃんの看板風デザイン">
+        <div class="sign-frame" aria-label="お客様に書いていただいた詩をもとにした焼肉大ちゃんの看板風デザイン">
           <div class="sign-paper">
-            <h1 class="brush-main">
-              <span class="small">焼<span class="heart">♥</span>肉</span>
-              <span class="big">大ちゃん<span class="smile">◡̈</span></span>
+            <h1 class="sign-name">
+              <span class="yakiniku">焼<span class="heart">♥</span>肉</span>
+              <span class="daichan">大ちゃん<span class="face">◡̈</span></span>
             </h1>
 
-            <div class="poem">
+            <div class="poem" aria-label="夫婦の笑い声と家族のあたたかさがふんわり漂う大ちゃん。香ばしいお肉と一緒に心までほぐれる場所。">
               <span>夫婦の</span>
               <span>笑い声と</span>
               <span>家族の</span>
@@ -729,20 +755,19 @@
         <div class="hero-copy">
           <span class="badge">大阪藤井寺・古市エリア</span>
 
-          <h1>
+          <div class="main-copy">
             今日も、<br>
             <span class="gold">焼肉で笑顔に。</span>
-          </h1>
+          </div>
 
           <p class="lead">
-            香ばしいお肉、あたたかい時間。<br>
-            家族でも、仲間でも、夫婦でも。<br>
-            心までほぐれる焼肉屋。
+            夫婦の笑い声と、家族のあたたかさ。<br>
+            香ばしいお肉と一緒に、心までほぐれる場所。<br>
+            焼肉大ちゃんで、あたたかい時間を。
           </p>
 
-          <div class="meat-stage" aria-label="炭火焼肉をイメージしたデザイン">
+          <div class="grill-card" aria-label="炭火焼肉の雰囲気を表現したデザイン">
             <div class="smoke"></div>
-            <div class="grill"></div>
             <div class="flame one"></div>
             <div class="flame two"></div>
             <div class="flame three"></div>
@@ -769,43 +794,39 @@
           <article class="card">
             <h3>あたたかい店</h3>
             <p>
-              手書き看板のような、やさしく入りやすい雰囲気。
-              ご家族、夫婦、友人同士でも使いやすい焼肉店です。
+              お客様に書いていただいた詩のように、家族や夫婦、仲間とゆっくり過ごせる焼肉店です。
             </p>
           </article>
 
           <article class="card">
-            <h3>しっかり旨い肉</h3>
+            <h3>香ばしいお肉</h3>
             <p>
-              タン、ロース、カルビ、ハラミ、ホルモンまで。
-              焼肉屋としての満足感を大事にしています。
+              タン、ロース、カルビ、ハラミ、ホルモンまで。しっかり焼肉を楽しめるメニューを揃えています。
             </p>
           </article>
 
           <article class="card">
             <h3>宴会にも対応</h3>
             <p>
-              飲み放題付き宴会コース、もつ鍋、ジンギスカンも対応。
-              しっかり食べて、しっかり楽しめます。
+              飲み放題付き宴会コース、もつ鍋、ジンギスカンも対応。しっかり食べて楽しめます。
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="course" class="section course-push">
+    <section id="course" class="section course-band">
       <div class="wrap course-box">
         <div>
-          <span class="kicker">COURSE</span>
-          <h2>宴会・飲み放題も<br>焼肉大ちゃんへ</h2>
+          <span class="kicker">MENU & COURSE</span>
+          <h2>メニューは別ページで<br>見やすく掲載</h2>
           <p>
-            コース内容・通常メニューは、別ページのメニュー表で確認できます。
-            ご予約はお電話が確実です。
+            通常メニュー、宴会コース、飲み放題付きコースは、メニューページで確認できます。
           </p>
         </div>
 
         <div class="actions">
-          <a class="btn btn-gold" href="menu.html#course-menu">コースを見る</a>
+          <a class="btn btn-gold" href="menu.html">メニューを見る</a>
           <a class="btn btn-red" href="tel:08095011129">電話予約する</a>
         </div>
       </div>
@@ -843,7 +864,7 @@
 
           <div class="info-box">
             <h3>アクセス</h3>
-            <p style="font-family:'Yu Gothic',Meiryo,sans-serif;font-weight:800;color:var(--muted);">
+            <p style="margin:0;color:var(--muted);font-weight:800;line-height:1.8;">
               藤井寺・古市・羽曳野エリアで焼肉、宴会、飲み放題をお探しの方は焼肉大ちゃんへ。
               ご来店前にお電話いただくとスムーズです。
             </p>
