@@ -40,3 +40,88 @@ a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}a:f
 @media(min-width:650px){.container{width:min(1000px,calc(100% - 56px))}.showcase,.showcase-inner{min-height:340px}.showcase-inner{padding:30px 36px 23px}.showcase-title{font-size:57px;max-width:500px}.category-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.category-feature{grid-column:span 2;min-height:176px}.category-link{min-height:176px;padding:17px}.menu-sections{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.course-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.page-detail .hero{min-height:197px;padding:33px}.page-detail .hero h1{font-size:41px}.rules{grid-template-columns:repeat(4,minmax(0,1fr))}.bottom-actions{max-width:480px;margin:auto}}
 @media(max-width:350px){.brand-text{font-size:15px}.category-link{padding:12px;min-height:148px}.category-link strong{font-size:15px}.category-link small{font-size:10px}.other-grid{grid-template-columns:1fr}.price{font-size:14px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+/* === DAICHAN NIGHT EDITION: 少しヤンチャ × 上品なゴールド === */
+:root{--bg:#0a0707;--panel:#1b1110;--panel2:#261712;--ink:#fff6e8;--sub:#d0bca8;--gold:#e8bd6b;--gold-bright:#ffdf91;--red:#ce2229;--line:rgba(245,193,99,.24);--line2:rgba(245,193,99,.5);--shadow:0 14px 36px rgba(0,0,0,.42)}
+body{background:
+  radial-gradient(ellipse at 85% -1%,rgba(187,18,34,.24),transparent 31rem),
+  radial-gradient(ellipse at 2% 48%,rgba(130,22,23,.11),transparent 30rem),
+  repeating-linear-gradient(145deg,transparent 0,transparent 27px,rgba(235,192,118,.012) 28px,transparent 29px),
+  #0a0707;}
+.site-head{background:rgba(11,7,7,.97);border-bottom:2px solid transparent;border-image:linear-gradient(90deg,#9d1621,#f3cf85 50%,#95151e) 1;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.brand-mark{border:2px solid #e8c277;transform:rotate(-5deg);background:linear-gradient(140deg,#b92628,#410e12 62%,#140808);box-shadow:inset 0 0 0 2px #3a1010,0 2px 14px rgba(196,26,40,.25);font-weight:900;text-shadow:1px 2px 2px #200505;}
+.brand-text{font-weight:1000;letter-spacing:.025em}
+.brand-text small{letter-spacing:.13em;color:#edc981}
+.head-link{border:1px solid #b78a51;background:linear-gradient(130deg,#332119,#1a100e);font-weight:900;box-shadow:inset 0 0 0 1px rgba(255,226,168,.06)}
+/* ファーストビュー：写真とタイポを強く、目に痛くない配色 */
+.showcase{margin-top:12px;border:1px solid #c29b5b;min-height:290px;box-shadow:0 0 0 3px rgba(5,3,2,.9),0 18px 36px rgba(0,0,0,.48);background:#160907}
+.showcase::before{background-position:67% 45%;filter:saturate(1.17) contrast(1.07)}
+.showcase::after{background:
+  linear-gradient(90deg,rgba(11,3,4,.95) 0%,rgba(15,4,4,.83) 37%,rgba(15,4,5,.34) 72%,rgba(8,2,2,.18) 100%),
+  linear-gradient(0deg,rgba(3,2,2,.7),transparent 45%),
+  radial-gradient(ellipse at 82% 28%,rgba(215,23,29,.14),transparent 48%)}
+.showcase-inner{min-height:290px;position:relative;padding:23px 21px 16px}
+.showcase-inner::before{content:"";position:absolute;inset:8px;pointer-events:none;border:1px solid rgba(249,205,126,.25);border-bottom:none}
+.showcase-kicker{font-weight:1000;color:#f7ce83;letter-spacing:.19em;font-size:10px}
+.showcase-kicker::before{width:23px;height:2px;background:var(--red)}
+.showcase-title{position:relative;font-family:Impact,"Arial Black","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-weight:1000;letter-spacing:-.035em;font-size:clamp(38px,11.3vw,65px);line-height:1.28;text-shadow:3px 4px 1px rgba(20,2,3,.9),0 5px 26px rgba(0,0,0,.85);margin:12px 0 7px}
+.showcase-title em{display:inline-block;position:relative;font-style:normal;white-space:nowrap;background:linear-gradient(180deg,#fff1ba 4%,#e1b65e 53%,#fff0a9 80%,#b57630);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:.2px #d9ac55;}
+.showcase-copy{display:inline-block;margin:0;color:#fff9ee;font-size:12px;font-weight:900;letter-spacing:.05em;background:linear-gradient(100deg,#bd1f2d,#6f121a);padding:7px 11px;border-left:3px solid #f2c978;transform:skewX(-5deg)}
+.showcase-stamp{position:absolute;z-index:2;top:42px;right:15px;width:67px;height:67px;display:grid;place-items:center;transform:rotate(11deg);border:3px solid #e4bb72;border-radius:50%;background:linear-gradient(140deg,rgba(138,17,29,.9),rgba(65,9,14,.92));box-shadow:0 2px 0 #4e130e,0 8px 20px rgba(0,0,0,.5);color:#fff6cf;text-align:center;font:900 17px/1.12 "Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;letter-spacing:.1em}
+.showcase-bottom{border-top:1px solid #d4a95e}
+.showcase-bottom span:last-child{font-weight:900;color:#ffe5ac}
+.menu-intro{margin-top:30px;padding-left:12px;border-left:4px solid #cb252d;align-items:center}
+.menu-intro h2{font-family:Impact,"Arial Black","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:31px;font-weight:1000;letter-spacing:.08em;color:#ffedd0}
+.menu-intro small{color:#e4b76e;letter-spacing:.18em;font-weight:900}
+.menu-intro p{color:#f2ddc8;font-weight:700}
+/* カテゴリー：斜め切りの赤・金ライン、タップ領域は十分 */
+.category-grid{gap:10px}
+.category-link{border:1px solid rgba(235,181,93,.3);border-left:3px solid #a41b24;min-height:157px;box-shadow:inset 0 1px rgba(255,231,186,.07),0 9px 21px rgba(0,0,0,.34);background:
+  linear-gradient(140deg,rgba(167,23,34,.11),transparent 51%),
+  repeating-linear-gradient(140deg,transparent 0,transparent 26px,rgba(255,211,138,.013) 27px,transparent 28px),
+  linear-gradient(140deg,#32201a,#120a09)}
+.category-link::before{right:-47px;bottom:-71px;width:160px;height:160px;border:2px solid rgba(233,183,100,.11);transform:rotate(13deg);border-radius:0}
+.category-link::after{content:"";position:absolute;top:0;right:0;border-top:22px solid #b9202b;border-left:22px solid transparent;filter:drop-shadow(0 0 4px rgba(205,30,43,.25))}
+.category-link .tile-no{color:#f5ca7b;font-family:Impact,"Arial Narrow",sans-serif;font-size:11px;letter-spacing:.2em}
+.category-link strong{color:#fff8ec;letter-spacing:-.02em;text-shadow:0 2px 9px rgba(0,0,0,.7);font-weight:1000}
+.category-link small{color:#d8bfaa;font-weight:600}
+.category-link .tile-arrow{right:12px;bottom:10px;font-size:26px;font-weight:900;color:#f3cb80}
+.category-link:hover,.category-link:focus-visible{background-color:#52231d;border-color:#efd29c}
+.category-feature{min-height:177px;border:1px solid #d2a660;border-left:5px solid #cf2530;padding:20px 17px}
+.category-feature::after{background:linear-gradient(90deg,rgba(10,4,4,.96),rgba(16,4,4,.76) 55%,rgba(10,4,4,.06)),url("hero-grill.png") 58% 52%/cover no-repeat}
+.category-feature .tile-text strong{font-family:Impact,"Arial Black","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:clamp(27px,8.1vw,41px);font-weight:1000;letter-spacing:-.045em}
+.category-feature .tile-arrow{background:#bd2529;color:#ffe7ad;padding:0 8px;right:13px;bottom:11px}
+.category-link[href="menu-alcohol.html"]{background:radial-gradient(ellipse at 95% 0%,rgba(159,31,34,.35),transparent 66%),linear-gradient(145deg,#322018,#120b09)}
+.category-link[href="menu-course.html"]{background:radial-gradient(ellipse at 95% 8%,rgba(220,157,51,.18),transparent 76%),linear-gradient(145deg,#312115,#120a09)}
+.menu-instruction{border:1px solid rgba(229,180,106,.3);border-left:3px solid #c92a34;background:#170f0d;color:#dfc7b2}
+.menu-instruction strong{color:#f6ce85}
+/* 商品ページも世界観を統一 */
+.page-detail .hero{min-height:182px;border:1px solid #ad8148;border-left:4px solid #c8232e;background-image:
+ linear-gradient(100deg,rgba(12,2,4,.95),rgba(28,6,5,.82) 60%,rgba(9,3,3,.20)),
+ url("hero-meat.png");box-shadow:0 10px 24px rgba(0,0,0,.38)}
+.page-detail .hero::before{border-left:0;inset:7px;border:1px solid rgba(229,192,112,.23)}
+.page-detail .hero::after{content:"DAICHAN";position:absolute;right:-9px;top:18px;transform:rotate(-10deg);font:900 33px Impact,"Arial Black",sans-serif;letter-spacing:.11em;color:rgba(241,194,115,.095);pointer-events:none}
+.page-detail .hero h1{font-family:Impact,"Arial Black","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:clamp(28px,7.7vw,42px);letter-spacing:-.025em;text-shadow:2px 3px 0 rgba(67,6,11,.9),0 4px 18px #000;color:#fff4e5}
+.page-detail .hero small{font-family:Impact,"Arial Black",sans-serif;letter-spacing:.18em;color:#f4c674}
+.page-detail .hero p{color:#efd7bb}
+.nav-scroll a{border-color:rgba(242,195,107,.38);font-weight:900;background:#281712}
+.nav-scroll a[aria-current="page"]{background:linear-gradient(125deg,#d5a657,#ffe1a1 55%,#bc8645);color:#2d0d07;border-color:#e5bf7b}
+.cat{background:linear-gradient(140deg,rgba(107,30,29,.09),transparent 53%),#18100e;border:1px solid rgba(215,166,90,.4);border-top:3px solid #a9212a;box-shadow:0 10px 24px rgba(0,0,0,.33)}
+.cat h2{font-family:Impact,"Arial Black","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:20px;font-weight:1000;letter-spacing:.015em;color:#ffdc99}
+.cat h2::after{width:48px;height:2px;background:linear-gradient(90deg,#d72536,#f5c779)}
+.list li{border-bottom:1px dashed rgba(239,196,118,.17);font-weight:800}
+.price{font-weight:1000;font-size:16px;color:#ffdf97;text-shadow:0 1px 11px rgba(166,103,22,.15)}
+.other-group{font-family:Impact,"Arial Black","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;letter-spacing:.03em;border-left:4px solid #c8232d;padding-left:11px}
+.mini-category{border-left:3px solid #9d2127;background:#231511;font-weight:900;min-height:58px}
+.course{border:1px solid #c2985c;border-top:4px solid #bd242e;background:linear-gradient(135deg,rgba(154,34,29,.13),transparent 65%),#21130f}
+.ribbon{font-family:Impact,"Arial Black","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;letter-spacing:.04em;font-weight:1000}
+.course-price strong{color:#ffdc8e;text-shadow:0 3px 20px rgba(158,98,22,.15)}
+.drink{background:linear-gradient(105deg,#68221d,#2a1914);border-left:3px solid #e9bd69}
+.btn{background:linear-gradient(135deg,#d32a31,#74181b);border:1px solid #b84b41}
+.btn-gold{background:linear-gradient(130deg,#e1b65d,#ffe5a5,#c99a4a);color:#321007;border:1px solid #f3d9a5}
+.bottom-nav{border-top:2px solid #b8874b}
+.bottom-actions a:first-child{background:#271813}
+.bottom-actions a:last-child{background:linear-gradient(115deg,#bb2630,#6e1017);border-color:#bc3939;color:#fff2da}
+@media(min-width:650px){.showcase,.showcase-inner{min-height:375px}.showcase-title{font-size:70px}.showcase-stamp{width:94px;height:94px;top:42px;right:38px;font-size:22px}.category-feature{min-height:192px}}
+@media(max-width:360px){.showcase-title{font-size:clamp(34px,10vw,39px)}.showcase-stamp{width:54px;height:54px;font-size:14px;top:39px;right:12px}.category-link strong{font-size:15px}.category-feature .tile-text strong{font-size:30px}.brand-text{font-size:15px}}
