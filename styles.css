@@ -454,3 +454,22 @@ em { color: var(--gold-light); font-style: normal; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+/* 2026-10-12: 説明文を整理したトップページのレイアウト */
+.section{padding:78px 0}
+.hero{min-height:620px;padding-top:55px}.hero-grid{gap:45px}.hero-copy{padding-bottom:20px}
+.hero h1{font-size:clamp(2.2rem,4.3vw,3.5rem);line-height:1.2}
+.hero h1 em{font-style:normal;font-size:.58em;letter-spacing:.02em;white-space:nowrap}
+.hero-lead{margin:15px 0 0;color:var(--gold-light);font-size:.93rem}
+.hero-buttons{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:26px}
+.hero-buttons .button{display:flex;align-items:center;justify-content:center;text-align:center;min-height:56px;padding:12px 8px;font-size:.88rem;font-weight:900}
+.hero-image-wrap{border-radius:25% 25% 9px 9px;min-height:460px}.hero-image-wrap img{height:460px}
+.story-copy blockquote{margin:20px 0}.section-heading{margin-bottom:23px}
+.section-heading h2,.story-copy h2,.menu-panel h2{font-size:clamp(1.9rem,4.4vw,3.15rem)}
+.split-heading{gap:18px;align-items:center}.split-heading>p{max-width:480px;font-size:.91rem}
+.bbq-payment{margin-top:18px;color:var(--muted);font-size:.8rem}
+.menu-panel{grid-template-columns:1.2fr .8fr}.menu-panel>div:first-child{padding:36px}.menu-panel-action{min-height:120px;padding:25px}.menu-panel-action .button{width:100%;text-align:center}
+.safety-grid{gap:30px}.safety-list summary{padding:16px 20px}
+.shop-social{display:flex;flex-wrap:wrap;gap:13px;margin-top:17px}.shop-social a{color:var(--gold-light);font-weight:800;font-size:.81rem;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:820px){.hero{min-height:auto}.hero-image-wrap,.hero-image-wrap img{min-height:330px;height:330px}.menu-panel{grid-template-columns:1fr}.menu-panel-action{min-height:90px}}
+@media(max-width:640px){.section{padding:46px 0}.hero{padding:28px 0 0}.hero-grid{gap:18px}.hero h1{font-size:clamp(2rem,8.6vw,2.7rem)}.hero h1 em{font-size:.51em}.hero-lead{margin-top:12px;font-size:.82rem}.hero-buttons{gap:7px;margin-top:18px}.hero-buttons .button{min-height:50px;padding:10px 6px;font-size:.72rem}.hero-image-wrap{border-radius:17px 17px 9px 9px;min-height:250px;height:250px}.hero-image-wrap img{height:250px;min-height:250px}.story-grid{gap:21px}.story-copy blockquote{margin:13px 0}.section-heading{margin-bottom:18px}.menu-panel>div:first-child{padding:24px 22px}.menu-panel-action{min-height:72px;padding:10px 22px 22px}.safety-grid{gap:19px}}
