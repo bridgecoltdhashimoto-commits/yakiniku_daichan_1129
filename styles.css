@@ -529,24 +529,24 @@ em { color: var(--gold-light); font-style: normal; }
   .shop-social .shop-social-button svg{width:28px;height:28px}
 }
 
-/* スマホ下部：アプリアイコン型の独立3ボタン */
+/* スマホ下部：アプリアイコン3個を自然な立体ボタンに */
 @media(max-width:640px){
-  body{padding-bottom:calc(119px + env(safe-area-inset-bottom))}
+  body{padding-bottom:calc(130px + env(safe-area-inset-bottom))}
   .mobile-cta{
     position:fixed;
     z-index:220;
-    bottom:calc(8px + env(safe-area-inset-bottom));
-    left:11px;
-    right:11px;
+    bottom:calc(14px + env(safe-area-inset-bottom));
+    left:12px;
+    right:12px;
     width:auto;
     max-width:470px;
-    min-height:91px;
+    min-height:94px;
     margin:0 auto;
-    padding:0;
+    padding:0 0 5px;
     display:grid;
     grid-template-columns:repeat(3,minmax(0,1fr));
     align-items:stretch;
-    gap:9px;
+    gap:11px;
     border:0;
     border-radius:0;
     background:transparent;
@@ -563,52 +563,97 @@ em { color: var(--gold-light); font-style: normal; }
   .mobile-cta .mobile-map,
   .mobile-cta .mobile-instagram{
     box-sizing:border-box;
+    position:relative;
+    isolation:isolate;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    gap:5px;
+    gap:6px;
     min-width:0;
-    min-height:91px;
-    padding:10px 3px 9px;
+    min-height:94px;
     margin:0;
-    border:1px solid rgba(224,192,140,.32);
-    border-radius:15px;
-    background:linear-gradient(165deg,rgba(39,30,25,.985),rgba(17,13,12,.99));
-    box-shadow:0 7px 21px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,238,207,.08);
-    color:#f8f1e6;
-    font-size:11px;
-    font-weight:800;
-    line-height:1.2;
-    text-align:center;
+    padding:10px 3px 11px;
+    border:1px solid rgba(229,192,136,.58);
+    border-bottom-color:rgba(126,89,57,.9);
+    border-radius:17px;
+    background:linear-gradient(155deg,#504033 0%,#30241e 15%,#201813 54%,#100d0b 100%);
+    color:#f8f1e7;
     text-decoration:none;
+    text-align:center;
+    box-shadow:
+      inset 0 1px 0 rgba(255,245,218,.24),
+      inset 0 -2px 0 rgba(0,0,0,.47),
+      0 4px 0 #0b0806,
+      0 7px 0 rgba(122,82,51,.44),
+      0 14px 23px rgba(0,0,0,.56);
+    transform:translateY(0);
+    transition:transform .16s ease,box-shadow .16s ease,filter .16s ease;
     -webkit-tap-highlight-color:transparent;
-    transition:transform .16s ease,border-color .16s ease;
   }
-  .mobile-cta a:focus-visible{outline:2px solid #f4d39b;outline-offset:2px}
-  .mobile-cta a:active{transform:scale(.96)}
+  .mobile-cta a::before{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    pointer-events:none;
+    top:2px;
+    left:5px;
+    right:5px;
+    height:35%;
+    border-radius:13px 13px 30px 30px;
+    background:linear-gradient(180deg,rgba(255,241,211,.12),rgba(255,241,211,0));
+  }
+  .mobile-cta .mobile-line{
+    border-color:rgba(218,184,121,.83);
+    background:linear-gradient(155deg,#5a4b35 0%,#362b21 28%,#1d1713 100%);
+  }
+  .mobile-cta .mobile-map{
+    border-color:rgba(136,181,217,.57);
+    border-bottom-color:rgba(53,79,102,.95);
+  }
+  .mobile-cta .mobile-instagram{
+    border-color:rgba(221,149,188,.56);
+    border-bottom-color:rgba(110,56,87,.98);
+  }
   .mobile-cta .quick-icon,
   .mobile-cta .mobile-line .quick-icon,
   .mobile-cta .mobile-map .quick-icon,
   .mobile-cta .mobile-instagram .quick-icon{
     box-sizing:border-box;
     display:block;
-    width:47px;
-    height:47px;
-    flex:0 0 47px;
+    position:relative;
+    flex:0 0 48px;
+    width:48px;
+    height:48px;
     margin:0;
     padding:0;
-    border:0;
-    border-radius:11px;
-    background:transparent;
-    box-shadow:0 3px 10px rgba(0,0,0,.37);
     overflow:hidden;
+    border:1px solid rgba(255,255,255,.42);
+    border-radius:12px;
+    background:transparent;
     color:inherit;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.36),
+      0 3px 0 rgba(0,0,0,.38),
+      0 7px 12px rgba(0,0,0,.36);
+    transform:translateZ(0);
+  }
+  .mobile-cta .quick-icon::after{
+    content:"";
+    display:block;
+    position:absolute;
+    pointer-events:none;
+    left:2px;
+    right:2px;
+    top:2px;
+    height:43%;
+    border-radius:10px 10px 60% 60%;
+    background:linear-gradient(180deg,rgba(255,255,255,.27),rgba(255,255,255,0));
   }
   .mobile-cta .quick-icon svg{
     display:block;
-    width:47px;
-    height:47px;
+    width:100%;
+    height:100%;
     color:inherit;
     filter:none;
   }
@@ -618,28 +663,45 @@ em { color: var(--gold-light); font-style: normal; }
   .mobile-cta .mobile-instagram .quick-label{
     display:block;
     margin:0;
-    color:#f1e9dc;
+    color:#f6ecdb;
     font-size:11px;
-    font-weight:800;
     line-height:1.2;
-    letter-spacing:0;
+    font-weight:850;
+    letter-spacing:.005em;
     white-space:nowrap;
     text-align:center;
-    text-shadow:none;
+    text-shadow:0 1px 2px rgba(0,0,0,.75);
   }
-  .mobile-cta .mobile-line .quick-label{font-size:11px}
   .mobile-cta .mobile-map::after,
   .mobile-cta .mobile-instagram::after{display:none;content:none}
+  .mobile-cta a:active{
+    transform:translateY(4px) scale(.985);
+    box-shadow:
+      inset 0 2px 5px rgba(0,0,0,.5),
+      inset 0 1px 0 rgba(255,245,218,.09),
+      0 1px 0 rgba(0,0,0,.72),
+      0 4px 9px rgba(0,0,0,.42);
+  }
+  .mobile-cta a:focus-visible{outline:2px solid #f7d296;outline-offset:3px}
+  @media(hover:hover) and (pointer:fine){
+    .mobile-cta a:hover{
+      transform:translateY(-2px);
+      filter:brightness(1.09);
+      box-shadow:inset 0 1px 0 rgba(255,245,218,.3),0 5px 0 #0b0806,0 9px 0 rgba(122,82,51,.4),0 17px 26px rgba(0,0,0,.6);
+    }
+    .mobile-cta a:active{transform:translateY(3px)}
+  }
 }
 @media(max-width:350px){
-  .mobile-cta{left:7px;right:7px;gap:7px}
-  .mobile-cta a,.mobile-cta a + a,.mobile-cta a:last-child{padding:8px 1px}
+  .mobile-cta{left:7px;right:7px;gap:8px}
+  .mobile-cta a,.mobile-cta a + a,.mobile-cta a:last-child{min-height:90px;padding:8px 2px}
   .mobile-cta .quick-icon,
   .mobile-cta .mobile-line .quick-icon,
   .mobile-cta .mobile-map .quick-icon,
-  .mobile-cta .mobile-instagram .quick-icon{width:42px;height:42px;flex-basis:42px}
-  .mobile-cta .quick-icon svg{width:42px;height:42px}
-  .mobile-cta .mobile-map .quick-label{font-size:10px}
+  .mobile-cta .mobile-instagram .quick-icon{width:44px;height:44px;flex-basis:44px}
+  .mobile-cta .mobile-map .quick-label,
   .mobile-cta .mobile-instagram .quick-label{font-size:10px}
 }
-@media(prefers-reduced-motion:reduce){.mobile-cta a{transition:none}}
+@media(prefers-reduced-motion:reduce){
+  .mobile-cta a{transition:none}
+}
