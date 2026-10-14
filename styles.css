@@ -529,18 +529,18 @@ em { color: var(--gold-light); font-style: normal; }
   .shop-social .shop-social-button svg{width:28px;height:28px}
 }
 
-/* スマホ下部：3つのボタンを独立させたプレミアムナビ */
-@media (max-width:640px){
-  body{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+/* スマホ下部：アプリアイコン型の独立3ボタン */
+@media(max-width:640px){
+  body{padding-bottom:calc(119px + env(safe-area-inset-bottom))}
   .mobile-cta{
     position:fixed;
     z-index:220;
-    bottom:calc(10px + env(safe-area-inset-bottom));
-    left:12px;
-    right:12px;
+    bottom:calc(8px + env(safe-area-inset-bottom));
+    left:11px;
+    right:11px;
     width:auto;
-    max-width:460px;
-    min-height:72px;
+    max-width:470px;
+    min-height:91px;
     margin:0 auto;
     padding:0;
     display:grid;
@@ -563,66 +563,54 @@ em { color: var(--gold-light); font-style: normal; }
   .mobile-cta .mobile-map,
   .mobile-cta .mobile-instagram{
     box-sizing:border-box;
-    position:relative;
     display:flex;
     flex-direction:column;
-    flex-wrap:nowrap;
     align-items:center;
     justify-content:center;
     gap:5px;
     min-width:0;
-    min-height:72px;
+    min-height:91px;
+    padding:10px 3px 9px;
     margin:0;
-    padding:10px 5px 9px;
-    border:1px solid rgba(206,166,110,.52);
-    border-radius:13px;
-    background:linear-gradient(150deg,#29201c 0%,#17120f 65%,#110d0b 100%);
-    box-shadow:0 6px 17px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,229,189,.06);
-    color:#f5eddf;
-    font-size:10px;
+    border:1px solid rgba(224,192,140,.32);
+    border-radius:15px;
+    background:linear-gradient(165deg,rgba(39,30,25,.985),rgba(17,13,12,.99));
+    box-shadow:0 7px 21px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,238,207,.08);
+    color:#f8f1e6;
+    font-size:11px;
     font-weight:800;
-    line-height:1.15;
+    line-height:1.2;
     text-align:center;
     text-decoration:none;
     -webkit-tap-highlight-color:transparent;
-    transition:transform .16s ease,border-color .16s ease,filter .16s ease;
+    transition:transform .16s ease,border-color .16s ease;
   }
-  .mobile-cta .mobile-line{
-    border-color:#edd3a3;
-    background:linear-gradient(150deg,#f1deb9,#d3af7d 63%,#ba905e);
-    box-shadow:0 6px 17px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.46);
-    color:#211711;
-  }
-  .mobile-cta .mobile-map{border-color:rgba(114,179,214,.7)}
-  .mobile-cta .mobile-instagram{border-color:rgba(220,133,172,.7)}
+  .mobile-cta a:focus-visible{outline:2px solid #f4d39b;outline-offset:2px}
+  .mobile-cta a:active{transform:scale(.96)}
   .mobile-cta .quick-icon,
   .mobile-cta .mobile-line .quick-icon,
   .mobile-cta .mobile-map .quick-icon,
   .mobile-cta .mobile-instagram .quick-icon{
-    display:grid;
-    place-items:center;
-    flex:0 0 25px;
-    width:25px;
-    height:25px;
+    box-sizing:border-box;
+    display:block;
+    width:47px;
+    height:47px;
+    flex:0 0 47px;
     margin:0;
     padding:0;
     border:0;
-    border-radius:0;
+    border-radius:11px;
     background:transparent;
-    box-shadow:none;
-    color:#ebd6b8;
+    box-shadow:0 3px 10px rgba(0,0,0,.37);
+    overflow:hidden;
+    color:inherit;
   }
-  .mobile-cta .mobile-line .quick-icon{color:#241811}
-  .mobile-cta .mobile-map .quick-icon{color:#86c8e6}
-  .mobile-cta .mobile-instagram .quick-icon{color:#f5a2bd}
   .mobile-cta .quick-icon svg{
     display:block;
-    width:25px;
-    height:25px;
-    flex:none;
+    width:47px;
+    height:47px;
     color:inherit;
     filter:none;
-    stroke-width:1.8;
   }
   .mobile-cta .quick-label,
   .mobile-cta .mobile-line .quick-label,
@@ -630,33 +618,28 @@ em { color: var(--gold-light); font-style: normal; }
   .mobile-cta .mobile-instagram .quick-label{
     display:block;
     margin:0;
-    color:#f1e9dd;
-    font-size:10px;
-    line-height:1.25;
-    font-weight:850;
+    color:#f1e9dc;
+    font-size:11px;
+    font-weight:800;
+    line-height:1.2;
     letter-spacing:0;
-    text-align:center;
     white-space:nowrap;
+    text-align:center;
     text-shadow:none;
   }
-  .mobile-cta .mobile-line .quick-label{
-    color:#241811;
-    font-size:11px;
-    font-weight:900;
-  }
+  .mobile-cta .mobile-line .quick-label{font-size:11px}
   .mobile-cta .mobile-map::after,
-  .mobile-cta .mobile-instagram::after{
-    display:none;
-    content:none;
-  }
-  .mobile-cta a:active{transform:scale(.96)}
-  .mobile-cta a:focus-visible{outline:2px solid #ffdf9e;outline-offset:2px}
+  .mobile-cta .mobile-instagram::after{display:none;content:none}
 }
 @media(max-width:350px){
-  .mobile-cta{left:8px;right:8px;gap:7px}
-  .mobile-cta a,
-  .mobile-cta a + a,
-  .mobile-cta a:last-child{min-height:68px;padding:8px 2px}
-  .mobile-cta .mobile-instagram .quick-label{font-size:9px}
+  .mobile-cta{left:7px;right:7px;gap:7px}
+  .mobile-cta a,.mobile-cta a + a,.mobile-cta a:last-child{padding:8px 1px}
+  .mobile-cta .quick-icon,
+  .mobile-cta .mobile-line .quick-icon,
+  .mobile-cta .mobile-map .quick-icon,
+  .mobile-cta .mobile-instagram .quick-icon{width:42px;height:42px;flex-basis:42px}
+  .mobile-cta .quick-icon svg{width:42px;height:42px}
+  .mobile-cta .mobile-map .quick-label{font-size:10px}
+  .mobile-cta .mobile-instagram .quick-label{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){.mobile-cta a{transition:none}}
