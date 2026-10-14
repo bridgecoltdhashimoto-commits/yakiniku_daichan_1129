@@ -529,53 +529,86 @@ em { color: var(--gold-light); font-style: normal; }
   .shop-social .shop-social-button svg{width:28px;height:28px}
 }
 
-/* 2026-10-14: スマホ下部はLINE・MAP・Instagramの3アクション */
+/* 2026-10-14: 上品なフローティングドック。ブランドカラーは小さなアイコンだけに使用 */
 @media(max-width:640px){
-  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  body{padding-bottom:calc(94px + env(safe-area-inset-bottom))}
   .mobile-cta{
-    grid-template-columns:1.15fr 1fr 1fr;
-    min-height:70px;
-    padding-bottom:env(safe-area-inset-bottom);
+    position:fixed;
+    left:12px;
+    right:12px;
+    bottom:calc(8px + env(safe-area-inset-bottom));
+    width:auto;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:stretch;
+    min-height:74px;
+    padding:6px;
+    border:1px solid rgba(227,190,133,.33);
+    border-radius:19px;
+    background:rgba(18,14,12,.97);
+    -webkit-backdrop-filter:blur(18px);
+    backdrop-filter:blur(18px);
+    box-shadow:0 7px 28px rgba(0,0,0,.55),0 0 0 1px rgba(0,0,0,.3);
+    overflow:hidden;
   }
-  .mobile-cta a{
-    min-width:0;
-    min-height:70px;
-    gap:3px;
-    padding:9px 4px 8px;
-    text-decoration:none;
-    font-size:11px;
-    line-height:1.2;
-    letter-spacing:0;
-    font-weight:900;
-    color:#fff;
-  }
-  .mobile-cta .mobile-line{
-    background:linear-gradient(135deg,#00b946,#007b31);
-    color:#fff;
-  }
-  .mobile-cta .mobile-map{
-    background:linear-gradient(135deg,#139fd8,#2461d1 55%,#173d9c);
-    color:#fff;
-  }
+  .mobile-cta a,
+  .mobile-cta .mobile-line,
+  .mobile-cta .mobile-map,
   .mobile-cta .mobile-instagram{
-    background:linear-gradient(135deg,#e9662b,#d52c7a 40%,#9035a7 75%,#5147a7);
-    color:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:4px;
+    min-width:0;
+    min-height:60px;
+    margin:0;
+    padding:5px 2px;
+    border:0;
+    border-radius:11px;
+    background:transparent;
+    box-shadow:none;
+    color:#f5eee3;
+    font-size:11px;
+    font-weight:700;
+    line-height:1.1;
+    text-decoration:none;
+    -webkit-tap-highlight-color:transparent;
   }
-  .mobile-cta .mobile-map svg,
-  .mobile-cta .mobile-instagram svg{
+  .mobile-cta a + a{border-left:1px solid rgba(225,185,127,.14);border-radius:0}
+  .mobile-cta .quick-icon{
+    display:grid;
+    place-items:center;
+    flex:0 0 34px;
+    width:34px;
+    height:34px;
+    padding:7px;
+    border-radius:50%;
+    color:#fff;
+    box-shadow:0 2px 7px rgba(0,0,0,.22);
+  }
+  .mobile-cta .mobile-line .quick-icon{background:#08b34b}
+  .mobile-cta .mobile-map .quick-icon{background:linear-gradient(150deg,#258dcd,#2957a8)}
+  .mobile-cta .mobile-instagram .quick-icon{background:linear-gradient(140deg,#ef863b,#d53683 49%,#7743a4)}
+  .mobile-cta .quick-icon svg{display:block;width:22px;height:22px;color:#fff;flex:none}
+  .mobile-cta .quick-label,
+  .mobile-cta .mobile-line .quick-label,
+  .mobile-cta .mobile-map .quick-label,
+  .mobile-cta .mobile-instagram .quick-label{
     display:block;
-    width:25px;
-    height:25px;
-    flex:0 0 auto;
-    color:#fff;
-  }
-  .mobile-cta .mobile-map span,
-  .mobile-cta .mobile-instagram span{
-    color:#fff;
+    color:#eee7db;
     font-size:10px;
-    font-weight:900;
-    letter-spacing:.01em;
+    line-height:1.2;
+    letter-spacing:.015em;
+    font-weight:800;
+    text-align:center;
+    white-space:nowrap;
   }
-  .mobile-cta .mobile-line span{color:#fff;font-size:10px}
-  .mobile-cta a:focus-visible{outline:3px solid #fff;outline-offset:-4px}
+  .mobile-cta a:focus-visible{outline:2px solid #ecc989;outline-offset:-3px}
+  .mobile-cta a:active{background:rgba(255,255,255,.07)}
+}
+@media(max-width:350px){
+  .mobile-cta{left:8px;right:8px;padding:5px}
+  .mobile-cta .quick-icon{width:32px;height:32px;flex-basis:32px}
+  .mobile-cta .quick-label{font-size:9px}
 }
