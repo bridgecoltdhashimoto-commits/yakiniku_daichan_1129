@@ -528,3 +528,54 @@ em { color: var(--gold-light); font-style: normal; }
   .shop-social .shop-social-button{min-height:80px;padding:10px 7px}
   .shop-social .shop-social-button svg{width:28px;height:28px}
 }
+
+/* 2026-10-14: スマホ下部はLINE・MAP・Instagramの3アクション */
+@media(max-width:640px){
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .mobile-cta{
+    grid-template-columns:1.15fr 1fr 1fr;
+    min-height:70px;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .mobile-cta a{
+    min-width:0;
+    min-height:70px;
+    gap:3px;
+    padding:9px 4px 8px;
+    text-decoration:none;
+    font-size:11px;
+    line-height:1.2;
+    letter-spacing:0;
+    font-weight:900;
+    color:#fff;
+  }
+  .mobile-cta .mobile-line{
+    background:linear-gradient(135deg,#00b946,#007b31);
+    color:#fff;
+  }
+  .mobile-cta .mobile-map{
+    background:linear-gradient(135deg,#139fd8,#2461d1 55%,#173d9c);
+    color:#fff;
+  }
+  .mobile-cta .mobile-instagram{
+    background:linear-gradient(135deg,#e9662b,#d52c7a 40%,#9035a7 75%,#5147a7);
+    color:#fff;
+  }
+  .mobile-cta .mobile-map svg,
+  .mobile-cta .mobile-instagram svg{
+    display:block;
+    width:25px;
+    height:25px;
+    flex:0 0 auto;
+    color:#fff;
+  }
+  .mobile-cta .mobile-map span,
+  .mobile-cta .mobile-instagram span{
+    color:#fff;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.01em;
+  }
+  .mobile-cta .mobile-line span{color:#fff;font-size:10px}
+  .mobile-cta a:focus-visible{outline:3px solid #fff;outline-offset:-4px}
+}
