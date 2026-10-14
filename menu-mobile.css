@@ -99,3 +99,11 @@ a:focus-visible{outline:3px solid var(--gold-light);outline-offset:3px}
  .list li{font-size:13px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* 2026-10-14 メニュー追加と加熱注意書き */
+.food-warning{margin:0 14px 14px;padding:12px 13px;border-left:3px solid #d95454;background:rgba(175,40,35,.15);color:#ffebe3;font-size:12px;line-height:1.65;font-weight:800}
+.menu-subtitle{margin:8px 14px 0;padding:7px 0;border-top:1px solid rgba(239,196,123,.24);font-size:13px;font-weight:900;color:var(--gold-light)}
+.menu-subnote{margin:2px 14px 15px;padding:10px 12px;border:1px solid var(--line);background:var(--panel2);color:var(--gold-light);font-size:13px;font-weight:800}
+.page-nabe .cat>.list:first-of-type li:first-child .price{font-size:20px}
+.page-nabe .cat>.list:first-of-type li:first-child{font-size:17px}
+@media(max-width:350px){.nav-scroll a{padding-inline:10px}.food-warning{font-size:11px}}
