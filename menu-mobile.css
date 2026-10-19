@@ -123,3 +123,18 @@ a:focus-visible{outline:3px solid var(--gold-light);outline-offset:3px}
 .dessert-choice p{margin:12px 0 0;color:var(--sub);font-size:12px}
 .dessert-inline-link{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:53px;margin-top:15px;padding:11px 15px;color:#21130d;background:var(--gold);font-size:15px;font-weight:900}
 @media(max-width:360px){.dessert-cards{gap:8px}.dessert-card{padding:15px 10px}.dessert-card h2{font-size:15px}.dessert-price{font-size:26px}}
+
+/* 2026-10-19 グランドメニューと酒類別ページの視認性改善 */
+.menu-intro:not(:first-child){margin-top:26px}
+.menu-intro h2{line-height:1.4}
+.category-drink{border-left-color:#bc8b4c}
+.category-drink .tile-no{color:#f5ce8c}
+.portion-note{margin:0 0 13px;padding:13px 14px;border:1px solid rgba(225,176,102,.55);border-left:4px solid #d5a963;background:linear-gradient(115deg,#453125,#211711);color:#ffeac3;font-size:14px;font-weight:900}
+.board-note{margin:15px 0 0;padding:14px;border:1px solid var(--line);background:var(--panel2);font-size:13px;font-weight:800;color:var(--gold-light)}
+.menu-other-link{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:16px 0 10px;padding:13px 14px;background:linear-gradient(120deg,#b43a36,#7f2222);font-size:13px;font-weight:900}
+.drink-guide{margin:16px 0 14px;color:var(--gold-light);font-size:13px}
+.drink-type-list{margin-top:5px}
+.drink-type-list .category-link{min-height:85px;justify-content:center}
+.page-slices .list .price{color:#ffe0a3}
+.page-yakiniku .cat .menu-subnote{font-size:12px;line-height:1.65;color:#fff0d6}
+@media(max-width:350px){.menu-other-link{font-size:12px}.portion-note{font-size:13px}}
