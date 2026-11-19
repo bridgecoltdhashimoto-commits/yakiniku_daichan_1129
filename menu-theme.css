@@ -1,0 +1,142 @@
+/* 焼肉 大ちゃん / 共通メニューデザイン
+   GitHub Pages でも同じ見た目になるローカルCSS（外部フォント・外部ライブラリ不使用） */
+:root{--menu-gold:#f0c984;--menu-gold-hi:#ffe5a7;--menu-ink:#120907;--menu-panel:#24130f;--menu-sub:#cfbba6;--menu-line:#785035}
+.menu-page{background:radial-gradient(ellipse at 90% 0,rgba(129,28,23,.23),transparent 34rem),#0b0706;color:#f9efe2}
+.menu-page .container{width:min(1120px,calc(100% - 44px))}
+.menu-page .ref-header{border-bottom:1px solid rgba(220,171,105,.33)}
+.menu-page .ref-header-book{line-height:1.2}
+.menu-lead,.detail-lead{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid rgba(239,193,130,.24);background:#1b0a08}
+.menu-lead:before,.detail-lead:before{content:'';position:absolute;inset:0;z-index:-2;background-image:url('season-banquet-hero.webp');background-position:70% 47%;background-size:cover}
+.menu-lead:after,.detail-lead:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(13,5,4,.99) 0%,rgba(19,6,5,.94) 43%,rgba(13,4,4,.42) 100%),linear-gradient(0deg,#0d0708a6,transparent 55%)}
+.menu-lead-inner{min-height:330px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:55px 0}
+.menu-page h1,.menu-page h2,.menu-page h3{letter-spacing:-.04em}
+.menu-lead h1,.detail-lead h1{font:900 clamp(38px,6vw,68px)/1.2 var(--serif);color:#fff5e5;margin:8px 0 10px;text-shadow:0 3px 14px #000}
+.menu-lead .subheading,.detail-lead .subheading{font-size:12px;letter-spacing:.22em}
+.menu-subline,.course-lead-sub{font-size:16px;color:#e8d6c1;margin:0 0 16px}
+.tax-label{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;background:rgba(104,37,23,.74);border:1px solid #b7814e;color:#ffe1af;font-size:12px;font-weight:900}
+.menu-special{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);margin-top:46px;overflow:hidden;background:linear-gradient(135deg,#3c1510,#190b09 68%);border:1px solid #be843e;box-shadow:0 15px 35px #0009}
+.menu-special-copy{padding:38px clamp(23px,4vw,50px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.menu-special h2{font:900 clamp(26px,3.4vw,42px)/1.35 var(--serif);margin:5px 0 12px}
+.menu-special-copy>p:not(.subheading){font-size:clamp(19px,2vw,27px);font-weight:900;color:#ffe6ab;margin:0 0 19px}
+.menu-special-copy>p span{font-size:12px;color:#e2c6a1}
+.menu-special .btn{min-height:48px;padding:10px 18px;font-size:13px}
+.menu-special img{height:100%;width:100%;max-height:360px;object-fit:cover;object-position:center}
+.menu-group{padding-top:38px}
+.menu-group:last-of-type{padding-bottom:40px}
+.menu-group h2{display:flex;align-items:center;gap:12px;margin:0 0 16px;color:#ffe4b0;font:900 clamp(24px,3vw,33px)/1.3 var(--serif)}
+.menu-group h2:before{content:'';display:block;width:6px;height:29px;background:linear-gradient(180deg,#e2ac60,#b31821)}
+.menu-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.menu-tile{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:15px;min-width:0;min-height:112px;padding:16px 18px;border:1px solid rgba(220,180,123,.3);border-left:4px solid #a92e32;background:linear-gradient(145deg,#322019,#160d0b);transition:border-color .2s,background .2s,transform .2s}
+.menu-tile:hover{border-color:#f0c984;background:linear-gradient(145deg,#483021,#26130e);transform:translateY(-2px)}
+.menu-tile-no{font-size:11px;letter-spacing:.12em;font-weight:900;color:#e4bb72}
+.menu-tile strong{font-size:clamp(16px,1.8vw,21px);line-height:1.35;font-weight:900;padding-right:18px}
+.menu-tile .arrow{position:absolute;right:16px;bottom:12px;font-size:24px;color:#edc98c}
+.menu-footnote{margin-top:22px;margin-bottom:34px;font-size:12px;line-height:1.7;color:#b9a58f}
+.detail-lead{margin-top:0}
+.detail-lead .container{padding-top:42px;padding-bottom:46px}
+.detail-lead h1{font-size:clamp(32px,4.4vw,51px);margin:8px 0 15px}
+.breadcrumb{display:inline-flex;align-items:center;gap:9px;margin:0 0 18px;color:#f6ce94;font-size:12px;font-weight:800;border-bottom:1px solid #c99c62;padding-bottom:4px}
+.breadcrumb:hover{color:#fff2da}
+.menu-tabs{position:sticky;z-index:35;top:79px;padding:11px 0 0;background:rgba(15,8,7,.97);border-bottom:1px solid #6e4b30;box-shadow:0 7px 22px #0007;backdrop-filter:blur(10px)}
+.menu-tabs-inner{width:min(1120px,calc(100% - 44px));margin:0 auto;display:flex;overflow:auto;gap:8px;padding-bottom:11px;scrollbar-color:#825733 transparent;scrollbar-width:thin}
+.menu-tabs a{flex:0 0 auto;display:flex;align-items:center;justify-content:center;min-height:38px;padding:8px 13px;border:1px solid #6f4932;background:#281710;color:#e8d4ba;white-space:nowrap;font-size:12px;font-weight:800}
+.menu-tabs a:hover{background:#3c2419;color:#fff1dd}
+.menu-tabs a[aria-current='page']{color:#260e05;background:linear-gradient(135deg,#f3d395,#dbad64);border-color:#fae1a9}
+.menu-tip{margin:24px 0 -8px;padding:14px 18px;font-size:14px;color:#ffe5b1;border-left:4px solid #e0a85d;background:linear-gradient(90deg,rgba(133,59,33,.38),rgba(50,22,12,.2));font-weight:800}
+.detail-content{padding-top:28px;padding-bottom:50px}
+.food-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.food-panel{min-width:0;overflow:hidden;border:1px solid #64452e;background:linear-gradient(165deg,#231611,#150d0a);box-shadow:0 8px 22px #0005}
+.food-panel h2{margin:0;padding:15px 20px;font:900 clamp(20px,2.3vw,25px)/1.4 var(--serif);background:linear-gradient(100deg,#842624,#3a1713);color:#fff1d4;border-bottom:1px solid #8a5d3b}
+.product-list{margin:0;padding:0 20px;list-style:none}
+.product-list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;min-height:52px;padding:12px 0;border-bottom:1px solid rgba(216,169,110,.19);font-size:15px;font-weight:700}
+.product-list li:last-child{border-bottom:0}
+.product-list li>span{overflow-wrap:anywhere;line-height:1.45}
+.product-list li>span small{display:block;color:#c6a987;font-size:11px;font-weight:500;margin-top:2px}
+.product-list li>strong{font-size:clamp(14px,1.4vw,17px);font-variant-numeric:tabular-nums;color:#ffe0a0;white-space:nowrap;text-align:right}
+.panel-note{margin:0;padding:12px 20px 16px;border-top:1px solid #59402c;color:#e3c8a6;font-size:12px;line-height:1.7}
+.next-menu{display:flex;justify-content:space-between;padding:15px 20px;margin-top:20px;background:linear-gradient(125deg,#8a191e,#4b1111);border:1px solid #aa6244;font-weight:900;color:#fff1dc}
+.detail-ctas{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:640px;margin:28px auto 0}
+.detail-ctas .btn{min-height:50px;font-size:13px}
+.course-lead:before{background-image:url('season-banquet-hero.webp');background-position:center center}
+.course-lead h1 span{color:#ffe0a0}
+.course-lead-sub{font-weight:800;color:#ffe2a5}
+.course-detail-list{padding-top:32px;padding-bottom:58px}
+.course-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+.course-detail-card{min-width:0;overflow:hidden;background:#1a100c;border:1px solid #755038;box-shadow:0 12px 32px #0006}
+.course-detail-card.premium{border-color:#ca9a50}
+.course-detail-card>img{width:100%;height:245px;object-fit:cover}
+.course-detail-copy{padding:25px}
+.course-detail-copy h2{font:900 clamp(22px,2.2vw,29px)/1.4 var(--serif);color:#fff1da;margin:5px 0 10px}
+.big-price{font-size:clamp(31px,3.5vw,42px);font-weight:900;color:#ffe0a1;font-variant-numeric:tabular-nums;margin:0 0 13px;line-height:1.3}
+.big-price small{font-size:11px;color:#dfc9a5;font-weight:700}
+.drink-badge{font-size:12px;color:#ffebc2;font-weight:900;background:#512418;border:1px solid #9b643c;padding:10px 12px;margin:0}
+.course-detail-copy ul{padding-left:20px;margin:18px 0 0;border-top:1px solid #62422d;padding-top:14px}
+.course-detail-copy li{padding:4px 0;color:#dfcbbb;font-size:13px;line-height:1.65}
+.course-extras{margin-top:22px;padding:26px;border:1px solid #76543a;background:linear-gradient(135deg,#2b170e,#170d0a)}
+.course-extras h2{font:900 23px/1.4 var(--serif);color:#ffe3ab;margin:0 0 17px}
+.extra-rows{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.extra-rows>div{display:flex;flex-direction:column;gap:4px;border:1px solid #6a452f;padding:15px;background:#2f1b13}
+.extra-rows strong{font-size:16px;color:#f7d39e}
+.extra-rows span{font-size:12px;color:#d1bca7}
+.course-benefits{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+.course-benefits span{font-size:12px;border:1px solid #845a3d;padding:8px 12px;color:#ffe2b0;background:#23140e;font-weight:900}
+.course-reserve{display:flex;justify-content:center;gap:11px;margin-top:25px}
+.course-reserve .btn{min-width:225px}
+@media (max-width:900px){
+  .menu-page .ref-nav{gap:12px}
+  .menu-page .ref-nav a{font-size:11px}
+  .menu-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .menu-tabs{top:81px}
+}
+@media (max-width:760px){
+  .menu-page .container{width:calc(100% - 32px)}
+  .menu-lead-inner{min-height:260px;padding:40px 0}
+  .menu-lead h1{font-size:clamp(35px,9vw,50px)}
+  .menu-special{grid-template-columns:1fr;margin-top:25px}
+  .menu-special-copy{padding:25px 22px}
+  .menu-special img{height:185px;max-height:none;object-position:center 60%}
+  .menu-group{padding-top:29px}
+  .menu-group h2{font-size:26px}
+  .menu-tabs{top:65px}
+  .menu-tabs-inner{width:calc(100% - 22px);gap:7px}
+  .menu-tabs a{font-size:11px;padding:8px 10px}
+  .detail-lead .container{padding-top:28px;padding-bottom:30px}
+  .detail-lead h1{font-size:clamp(29px,8vw,43px)}
+  .food-panels{grid-template-columns:1fr;gap:14px}
+  .course-detail-grid{grid-template-columns:1fr}
+  .course-detail-card>img{height:200px}
+  .course-detail-list{padding-bottom:110px}
+  .extra-rows{grid-template-columns:1fr}
+  .course-reserve{display:grid;grid-template-columns:1fr;max-width:360px;margin-inline:auto}
+  .course-reserve .btn{min-width:0}
+  .menu-page .footer{padding-bottom:108px}
+}
+@media (max-width:450px){
+  .menu-page .container{width:calc(100% - 26px)}
+  .menu-lead-inner{min-height:210px;padding:32px 0}
+  .menu-lead h1{font-size:35px}
+  .menu-subline{font-size:13px;margin-bottom:12px}
+  .menu-special-copy>p:not(.subheading){font-size:20px}
+  .menu-tiles{gap:8px}
+  .menu-tile{padding:13px 12px;min-height:91px;gap:10px}
+  .menu-tile strong{font-size:clamp(13px,3.6vw,16px)}
+  .menu-tile .arrow{right:10px;bottom:10px;font-size:19px}
+  .menu-group{padding-top:25px}
+  .menu-group h2{font-size:24px}
+  .product-list{padding:0 13px}
+  .product-list li{font-size:13px;gap:7px;padding:10px 0}
+  .product-list li>strong{font-size:14px}
+  .food-panel h2{padding:13px 15px;font-size:21px}
+  .panel-note{padding:11px 13px;font-size:11px}
+  .detail-ctas{gap:8px}
+  .detail-ctas .btn{font-size:11px;padding:8px}
+  .course-detail-copy{padding:19px}
+  .course-detail-copy h2{font-size:22px}
+  .big-price{font-size:32px}
+  .course-extras{padding:18px}
+  .course-extras h2{font-size:19px}
+  .extra-rows strong{font-size:14px}
+  .course-benefits{justify-content:flex-start}
+  .course-benefits span{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.menu-tile{transition:none!important}}
